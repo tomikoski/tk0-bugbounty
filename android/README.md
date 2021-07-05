@@ -24,6 +24,10 @@ adb push image-bullhead-opm7.181205.001/boot.img /sdcard/Download
 
 1. done & simple test:
 ```
-adb shell "su -c id"
- uid=0(root) gid=0(root) groups=0(root) context=u:r:magisk:s0
+adb devices; adb shell "su -c id"
+List of devices attached
+00<DEVICEIDHERE>	device
+
+uid=0(root) gid=0(root) groups=0(root) context=u:r:magisk:s0
+
 ```
