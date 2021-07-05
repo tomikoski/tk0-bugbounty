@@ -22,4 +22,8 @@ adb push image-bullhead-opm7.181205.001/boot.img /sdcard/Download
 
     ![screenshot](magisk.png)
 
-1. done!
+1. done & simple test:
+```
+adb shell "su -c id"
+ uid=0(root) gid=0(root) groups=0(root) context=u:r:magisk:s0
+```
