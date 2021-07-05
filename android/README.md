@@ -15,7 +15,7 @@ $ adb push image-bullhead-opm7.181205.001/boot.img /sdcard/Download
 ```
 
 ## Install Magisk boot.img
-1. open magisk use option `Select and Patch a file` to patch `/sdcard/Download/boot.img`
+1. open magisk, press install and use option `Select and Patch a file` to patch file `/sdcard/Download/boot.img`
 1. download patched, e.g. `$ adb pull /sdcard/Download/magisk_patched-23000_ESlfM.img`
 1. `$ adb reboot bootloader`
 1. `$ fastboot flash boot magisk_patched-23000_ESlfM.img`
