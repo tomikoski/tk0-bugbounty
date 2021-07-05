@@ -19,5 +19,7 @@ adb push image-bullhead-opm7.181205.001/boot.img /sdcard/Download
 1. `fastboot flash boot magisk_patched-23000_ESlfM.img`
 1. `fastboot reboot`
 1. open magisk, should look like:
-    
+
     ![screenshot](magisk.png)
+
+1. done!
