@@ -1,7 +1,7 @@
 Nexus 5x (with ram disk)
 ========================
 
-1. download stock firmware: https://developers.google.com/android/images#bullhead -> https://dl.google.com/dl/android/aosp/bullhead-opm7.181205.001-factory-5f189d84.zip
+1. download stock firmware: https://dl.google.com/dl/android/aosp/bullhead-opm7.181205.001-factory-5f189d84.zip (latest for Nexus 5x)
 1. stock firmware: `./flash-all.sh` (wipes all data!)
 1. install magisk
 1. extract boot.img from factory image and upload to device `Downloads`:
