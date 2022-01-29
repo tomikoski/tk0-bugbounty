@@ -1,8 +1,8 @@
-Nexus 5x (with ram disk)
-========================
+Nexus 5x (with ram disk) + Pixel4 (with ram disk)
+=================================================
 
 ## Prepare boot.img
-1. download stock firmware: https://dl.google.com/dl/android/aosp/bullhead-opm7.181205.001-factory-5f189d84.zip (latest for Nexus 5x)
+1. download stock firmware: https://dl.google.com/dl/android/aosp/bullhead-opm7.181205.001-factory-5f189d84.zip (latest for Nexus 5x), https://developers.google.com/android/images#flame (Pixel 4)
 1. unzip stock firmware
 1. unlock OEM (from developer menu)
 1. reboot to bootloader: `adb reboot bootloader`
