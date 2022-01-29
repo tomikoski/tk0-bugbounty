@@ -4,6 +4,9 @@ Nexus 5x (with ram disk)
 ## Prepare boot.img
 1. download stock firmware: https://dl.google.com/dl/android/aosp/bullhead-opm7.181205.001-factory-5f189d84.zip (latest for Nexus 5x)
 1. unzip stock firmware
+1. unlock OEM (from developer menu)
+1. reboot to bootloader: `adb reboot bootloader`
+1. unlock flashing: `fastboot flashing unlock`
 1. flash stock firmware all (boot, recovery, etc.): `$ ./flash-all.sh` (wipes all data!)
 1. install magisk: https://topjohnwu.github.io/Magisk/install.html
 1. extract boot.img from factory image and push to device:
