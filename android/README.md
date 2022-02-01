@@ -3,7 +3,7 @@ Nexus 5x (with ram disk) + Pixel4 (with ram disk)
 
 ## Bricked device?
 This should fix MOST of the issues, via https://android.stackexchange.com/a/232528
-```
+
 Here are the essential steps, more detailed information is in the links above:
 
 1. Download the OTA ZIP file from the above page, and know where it is located but do NOT unzip the file. Note you should always select the newest one listed for your device which will typically be at the bottom of your device section.
@@ -15,7 +15,6 @@ Here are the essential steps, more detailed information is in the links above:
 1. Enter adb sideload ota_file.zip where ota_file.zip is the full path and filename of the OTA ZIP file you downloaded previously
 1. The device will download and verify the file, then flash it to your device, then make that software "slot" active. If all goes well, after several minutes a success confirmation will be displayed and you will be presented with a menu.
 1. Select Reboot system now and wait for the phone to boot up fully.
-```
 
 ## Prepare boot.img
 1. download stock firmware: https://dl.google.com/dl/android/aosp/bullhead-opm7.181205.001-factory-5f189d84.zip (latest for Nexus 5x), https://developers.google.com/android/images#flame (Pixel 4)
