@@ -9,4 +9,6 @@
 1. **preffered** Use Ubuntu - OR - use **INTEL** based macOS or older macOS - latest (2022) doesn't work with Apple M1 at least :[
 1. use following settings: ![testing](cr.png)
 
-If this doesn't work (exploit does not trigger) - reset iPhone using `erase all content -> everything`. Repeat.
+Problem solving:
+* If this doesn't work (exploit does not trigger) - reset iPhone using `erase all content -> everything`. Repeat.
+* If Cydia / apt fails - remove from system and rearm using checkra1n
