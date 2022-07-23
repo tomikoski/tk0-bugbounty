@@ -1,5 +1,8 @@
 # iOS
 
+## Jailbreaking
+
+*Using iPhone7 with iOS 14.8*
 
 ### checkra1n
 1. download checkra1n (0.12.4)
