@@ -12,3 +12,6 @@
 Problem solving:
 * If this doesn't work (exploit does not trigger) - reset iPhone using `erase all content -> everything`. Repeat.
 * If Cydia / apt fails - remove from system and rearm using checkra1n
+
+## Decrypting HTTPS traffic
+* https://andydavies.me/blog/2019/12/12/capturing-and-decrypting-https-traffic-from-ios-apps/
