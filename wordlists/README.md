@@ -9,3 +9,4 @@ Wordlists
 * firstnames (etunimet)
 * lastnames (sukunimet)
 * kotus vocabulary - https://kaino.kotus.fi/sanat/nykysuomi/
+* based on: https://www.avoindata.fi/data/fi/dataset/none
