@@ -1,0 +1,1023 @@
+sudo ./palera1n.sh --tweaks 15.7.2 --semi-tethered
+[sudo] password for tomi: 
+[*] Command ran: sudo ./palera1n.sh --tweaks 15.7.2 --semi-tethered
+Archive:  gaster-Linux.zip
+  inflating: gaster                  
+[-] pyimg4 not installed. Press any key to install it, or press ctrl + c to cancel
+Collecting pyimg4
+  Downloading pyimg4-0.7-py3-none-any.whl (13 kB)
+Requirement already satisfied: click<9.0.0,>=8.0.0 in /usr/lib/python3/dist-packages (from pyimg4) (8.0.3)
+Collecting asn1<3.0.0,>=2.6.0
+  Downloading asn1-2.6.0-py2.py3-none-any.whl (9.8 kB)
+Collecting pycryptodome<4.0.0,>=3.16.0
+  Downloading pycryptodome-3.16.0-cp35-abi3-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_12_x86_64.manylinux2010_x86_64.whl (2.3 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.3/2.3 MB 8.5 MB/s eta 0:00:00
+Collecting pyliblzfse<0.5.0,>=0.4.1
+  Downloading pyliblzfse-0.4.1.tar.gz (47 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 47.7/47.7 KB 2.2 MB/s eta 0:00:00
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+Collecting pylzss<0.4.0,>=0.3.1
+  Downloading pylzss-0.3.1.tar.gz (25 kB)
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+Collecting enum-compat
+  Downloading enum_compat-0.0.3-py3-none-any.whl (1.3 kB)
+Building wheels for collected packages: pyliblzfse, pylzss
+  Building wheel for pyliblzfse (setup.py): started
+  Building wheel for pyliblzfse (setup.py): finished with status 'done'
+  Created wheel for pyliblzfse: filename=pyliblzfse-0.4.1-cp310-cp310-linux_x86_64.whl size=87510 sha256=a5e972998c6ff567173475ed3a80c01e3f12e1c3b9bc145b73b58e991b56bae5
+  Stored in directory: /root/.cache/pip/wheels/d7/a5/02/524ce466ad3c940403767bfe54e967d4070fc88cf6d56ce323
+  Building wheel for pylzss (setup.py): started
+  Building wheel for pylzss (setup.py): finished with status 'done'
+  Created wheel for pylzss: filename=pylzss-0.3.1-cp310-cp310-linux_x86_64.whl size=30105 sha256=6f0067eb9d1ff5bd9cab4a13032ed701b46b5542d04440425e9b1460a3375f3c
+  Stored in directory: /root/.cache/pip/wheels/b8/7f/22/9ac938843c03887080c768ab31171dbb1d62ece126a413d041
+Successfully built pyliblzfse pylzss
+Installing collected packages: pylzss, pyliblzfse, enum-compat, pycryptodome, asn1, pyimg4
+Successfully installed asn1-2.6.0 enum-compat-0.0.3 pycryptodome-3.16.0 pyimg4-0.7 pyliblzfse-0.4.1 pylzss-0.3.1
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+palera1n | Version 1.4.1-main-8e18f20
+Written by Nebula and Mineek | Some code and ramdisk from Nathan
+
+[*] Waiting for devices
+[*] Detected recovery mode device
+[*] Getting device info...
+[*] Press any key when ready for DFU mode
+Get ready (0)
+Hold volume down + side button (0)
+Release side button, but keep holding volume down (4)
+[*] Device entered DFU!
+[*] Creating ramdisk
+Archive:  gaster-Linux.zip
+  inflating: gaster                  
+usb_timeout: 5
+[libusb] Waiting for the USB handle with VID: 0x5AC, PID: 0x1227
+CPID: 0x8010
+Found the USB handle.
+Stage: RESET
+ret: true
+[libusb] Waiting for the USB handle with VID: 0x5AC, PID: 0x1227
+CPID: 0x8010
+Found the USB handle.
+Stage: SPRAY
+ret: true
+[libusb] Waiting for the USB handle with VID: 0x5AC, PID: 0x1227
+CPID: 0x8010
+Found the USB handle.
+Stage: SETUP
+ret: true
+[libusb] Waiting for the USB handle with VID: 0x5AC, PID: 0x1227
+CPID: 0x8010
+Found the USB handle.
+Stage: PATCH
+ret: true
+[libusb] Waiting for the USB handle with VID: 0x5AC, PID: 0x1227
+CPID: 0x8010
+Found the USB handle.
+Now you can boot untrusted images.
+img4tool version: 0.197-aca6cf005c94caf135023263cbb5c61a0081804f-RELEASE
+Compiled with plist: YES
+Saved IM4M to work/IM4M
+Version: 3fc8c093f4660f6c6e07c0c9214618733da01ffc - 36
+libfragmentzip version: 0.60-120447d0f410dffb49948fa155467fc5d91ca3c8
+init pzb: https://updates.cdn-apple.com/2022SummerFCS/fullrestores/012-41763/0BC321DF-1A4E-473B-9EE0-BF126CB1CDA8/iPhone_4.7_P3_15.6_19G71_Restore.ipsw
+init done
+getting: BuildManifest.plist
+100% [===================================================================================================>]
+download succeeded
+Version: 3fc8c093f4660f6c6e07c0c9214618733da01ffc - 36
+libfragmentzip version: 0.60-120447d0f410dffb49948fa155467fc5d91ca3c8
+init pzb: https://updates.cdn-apple.com/2022SummerFCS/fullrestores/012-41763/0BC321DF-1A4E-473B-9EE0-BF126CB1CDA8/iPhone_4.7_P3_15.6_19G71_Restore.ipsw
+init done
+getting: Firmware/dfu/iBSS.d10.RELEASE.im4p
+100% [===================================================================================================>]
+download succeeded
+Version: 3fc8c093f4660f6c6e07c0c9214618733da01ffc - 36
+libfragmentzip version: 0.60-120447d0f410dffb49948fa155467fc5d91ca3c8
+init pzb: https://updates.cdn-apple.com/2022SummerFCS/fullrestores/012-41763/0BC321DF-1A4E-473B-9EE0-BF126CB1CDA8/iPhone_4.7_P3_15.6_19G71_Restore.ipsw
+init done
+getting: Firmware/dfu/iBEC.d10.RELEASE.im4p
+100% [===================================================================================================>]
+download succeeded
+Version: 3fc8c093f4660f6c6e07c0c9214618733da01ffc - 36
+libfragmentzip version: 0.60-120447d0f410dffb49948fa155467fc5d91ca3c8
+init pzb: https://updates.cdn-apple.com/2022SummerFCS/fullrestores/012-41763/0BC321DF-1A4E-473B-9EE0-BF126CB1CDA8/iPhone_4.7_P3_15.6_19G71_Restore.ipsw
+init done
+getting: Firmware/all_flash/DeviceTree.d101ap.im4p
+100% [===================================================================================================>]
+download succeeded
+Version: 3fc8c093f4660f6c6e07c0c9214618733da01ffc - 36
+libfragmentzip version: 0.60-120447d0f410dffb49948fa155467fc5d91ca3c8
+init pzb: https://updates.cdn-apple.com/2022SummerFCS/fullrestores/012-41763/0BC321DF-1A4E-473B-9EE0-BF126CB1CDA8/iPhone_4.7_P3_15.6_19G71_Restore.ipsw
+init done
+getting: Firmware/078-34285-078.dmg.trustcache
+100% [===================================================================================================>]
+download succeeded
+Version: 3fc8c093f4660f6c6e07c0c9214618733da01ffc - 36
+libfragmentzip version: 0.60-120447d0f410dffb49948fa155467fc5d91ca3c8
+init pzb: https://updates.cdn-apple.com/2022SummerFCS/fullrestores/012-41763/0BC321DF-1A4E-473B-9EE0-BF126CB1CDA8/iPhone_4.7_P3_15.6_19G71_Restore.ipsw
+init done
+getting: kernelcache.release.iphone9
+100% [===================================================================================================>]
+download succeeded
+Version: 3fc8c093f4660f6c6e07c0c9214618733da01ffc - 36
+libfragmentzip version: 0.60-120447d0f410dffb49948fa155467fc5d91ca3c8
+init pzb: https://updates.cdn-apple.com/2022SummerFCS/fullrestores/012-41763/0BC321DF-1A4E-473B-9EE0-BF126CB1CDA8/iPhone_4.7_P3_15.6_19G71_Restore.ipsw
+init done
+getting: 078-34285-078.dmg
+100% [===================================================================================================>]
+download succeeded
+usb_timeout: 5
+[libusb] Waiting for the USB handle with VID: 0x5AC, PID: 0x1227
+CPID: 0x8010
+Found the USB handle.
+Now you can boot untrusted images.
+[libusb] Waiting for the USB handle with VID: 0x5AC, PID: 0x1227
+Found the USB handle.
+usb_timeout: 5
+[libusb] Waiting for the USB handle with VID: 0x5AC, PID: 0x1227
+CPID: 0x8010
+Found the USB handle.
+Now you can boot untrusted images.
+[libusb] Waiting for the USB handle with VID: 0x5AC, PID: 0x1227
+Found the USB handle.
+main: Starting...
+iOS 15 iBoot detected!
+getting get_debug_enabled_patch() patch
+getting get_sigcheck_patch() patch
+applying patch=0x1800c0d7c : 000080d2
+applying patch=0x1800c0dc4 : 000080d2
+applying patch=0x1800c29b4 : 200080d2
+main: Writing out patched file to work/iBSS.patched...
+main: Quitting...
+none
+main: Starting...
+iOS 15 iBoot detected!
+getting get_boot_arg_patch(rd=md0 debug=0x2014e wdt=-1 serial=3 ) patch
+getting get_debug_enabled_patch() patch
+getting get_unlock_nvram_patch() patch
+getting get_sigcheck_patch() patch
+applying patch=0x1800c0d7c : 000080d2
+applying patch=0x1800c0dc4 : 000080d2
+applying patch=0x1800b1f88 : 000080d2c0035fd6
+applying patch=0x1800b1fe0 : 000080d2c0035fd6
+applying patch=0x1800ee5a8 : 000080d2c0035fd6
+applying patch=0x1800c29b4 : 200080d2
+applying patch=0x1800c3fc8 : 58330b50
+applying patch=0x1800da632 : 72643d6d64302064656275673d30783230313465207764743d2d312073657269616c3d332000
+applying patch=0x1800c832c : 1f2003d5
+main: Writing out patched file to work/iBEC.patched...
+main: Quitting...
+none
+krnl
+main: Starting...
+main: Detected fat macho kernel
+Kernel: Adding AMFI_get_out_of_my_way patch...
+get_amfi_out_of_my_way_patch: Entering ...
+get_amfi_out_of_my_way_patch: Kernel-8020 inputted
+get_amfi_out_of_my_way_patch: Found Internal Error: No cdhash found. str loc at 0x9a7061
+get_amfi_out_of_my_way_patch: Found Internal Error: No cdhash found. str ref at 0x10b0c64
+get_amfi_out_of_my_way_patch: Patching AMFI at 0x10ac2a8
+main: Writing out patched file to work/kcache.patched...
+main: Quitting...
+krnl
+dtre
+rtsc
+rdsk
+Reading work/ramdisk.dmg...
+IM4P outputted to: work/ramdisk.im4p
+Reading work/ramdisk.im4p...
+Reading work/IM4M...
+Creating Image4...
+Image4 file outputted to: sshramdisk/ramdisk.img4
+none
+[*] Booting ramdisk
+usb_timeout: 5
+[libusb] Waiting for the USB handle with VID: 0x5AC, PID: 0x1227
+CPID: 0x8010
+Found the USB handle.
+Now you can boot untrusted images.
+usb_timeout: 5
+[libusb] Waiting for the USB handle with VID: 0x5AC, PID: 0x1227
+Found the USB handle.
+[==================================================] 100.0%
+[==================================================] 100.0%
+[==================================================] 100.0%
+[==================================================] 100.0%
+[==================================================] 100.0%
+[==================================================] 100.0%
+[==================================================] 100.0%
+Creating listening port 6413 for device port 22
+bind(): Address not available
+Error creating socket for listen port 6413: Address not available
+[*] Testing for baseband presence
+[*] Dumping apticket
+[*] Creating fakefs, this may take a while (up to 10 minutes)
+[*] fakefs created, continuing...
+[*] Patching the kernel
+[*] Downloading BuildManifest
+Version: 3fc8c093f4660f6c6e07c0c9214618733da01ffc - 36
+libfragmentzip version: 0.60-120447d0f410dffb49948fa155467fc5d91ca3c8
+init pzb: https://updates.cdn-apple.com/2022FallFCS/fullrestores/012-91805/5531E6FE-EDD1-4A4F-9B8C-4A12A4CD541B/iPhone_4.7_P3_15.7.2_19H218_Restore.ipsw
+init done
+getting: BuildManifest.plist
+100% [===================================================================================================>]
+download succeeded
+[*] Downloading kernelcache
+Version: 3fc8c093f4660f6c6e07c0c9214618733da01ffc - 36
+libfragmentzip version: 0.60-120447d0f410dffb49948fa155467fc5d91ca3c8
+init pzb: https://updates.cdn-apple.com/2022FallFCS/fullrestores/012-91805/5531E6FE-EDD1-4A4F-9B8C-4A12A4CD541B/iPhone_4.7_P3_15.7.2_19H218_Restore.ipsw
+init done
+getting: kernelcache.release.iphone9
+100% [===================================================================================================>]
+download succeeded
+[*] Patching kernelcache
+Reading work/kernelcache...
+[NOTE] Image4 payload data is LZFSE compressed, decompressing...
+Extracted Image4 payload data to: work/kcache.raw
+Kernel at 0x1092d4000, entry at 0x10b1884e8
+
+#==================
+#
+# checkra1n kpf 
+#
+# Proudly written in nano
+# (c) 2019-2022 Kim Jong Cracks
+#
+# This software is not for sale
+# If you purchased this, please
+# report the seller.
+#
+# Get it for free at https://checkra.in
+#
+#====  Made by  ===
+# argp, axi0mx, danyl931, jaywalker, kirb, littlelailo, nitoTV
+# never_released, nullpixel, pimskeks, qwertyoruiop, sbingner, siguza
+#==== Thanks to ===
+# haifisch, jndok, jonseals, xerub, lilstevie, psychotea, sferrini
+# Cellebrite (ih8sn0w, cjori, ronyrus et al.)
+#==================
+Detected Kernel version Darwin: 21.6.0 xnu: 8020
+KPF: Found root_livefs
+KPF: Found APFS mount
+KPF: found apfs_vfsop_mount
+KPF: Found root_livefs
+KPF: found handle_eval_rootauth
+followed call from 0xfffffff005a2a414 to 0xfffffff0072d77d8
+followed call from 0xfffffff0072d77d8 to 0xfffffff0072e9400
+KPF: Found AMFI execve hook
+KPF: Found AMFI mac_syscall
+followed call from 0xfffffff005a2ea58 to 0xfffffff005a2f490
+followed call from 0xfffffff005a2f4a8 to 0xfffffff0075e0730
+Found kpf_find_offset_p_flags 0xfffffff0075e0730
+Found offsetof_p_flags 264
+KPF: Found AMFI hashtype check
+KPF: Found vnode_lookup
+followed call from 0xfffffff0068a89b8 to 0xfffffff007384684
+followed call from 0xfffffff0068a89cc to 0xfffffff00735fa90
+followed call from 0xfffffff0068a8a04 to 0xfffffff00735d5f0
+KPF: Found mach traps
+KPF: Found tfp0
+KPF: Found sbops
+KPF: Found shellcode area, copying...
+KPF: Found ret0 gadget
+KPF: Found convert_port_to_map_with_flavor
+Trying vm_fault_enter at 0xfffffff007259784
+KPF: Found vm_fault_enter
+KPF: Found vm_map_protect
+kpf_mac_vm_map_protect_callback: failed to find ldr
+KPF: Found vm_map_protect
+kpf_mac_vm_map_protect_callback: failed to find ldr
+KPF: Found vm_map_protect
+kpf_mac_vm_map_protect_callback: failed to find ldr
+KPF: Found vnode_getpath
+Dounmount no parent lock code
+KPF: Found mac_mount
+KPF: Found mac_mount
+KPF: Found dounmount
+KPF: Found vnode_getattr
+shared_region_root_dir: Failed to find cmp/b.cond
+shared_region_root_dir: Failed to find cmp/b.cond
+shared_region_root_dir: Failed to find cmp/b.cond
+shared_region_root_dir: Failed to find cmp/b.cond
+KPF: Found vnop_rootvp_auth
+Dounmount no parent lock code
+Dounmount failed to find second call for parent_vp
+Dounmount no parent lock code
+KPF: Patched dyld check
+Dounmount no parent lock code
+Dounmount no parent lock code
+Dounmount no parent lock code
+Dounmount no parent lock code
+shared_region_root_dir: Failed to find cmp/b.cond
+vm_fault_enter_callback: already ran, skipping...
+Found vnode_lookup: 0xfffffff00735fa90
+Found vnode_put: 0xfffffff00735d5f0
+dyld_hook_addr: 0xfffffff007650c7c -> 0xfffffff007185840 base 0xfffffff0071858e4
+fffffff0071857ac: BL fffffff007384684 : 0x9407fbb6
+fffffff0071857cc: BL fffffff007386138 : 0x9408025b
+fffffff007185838: B  fffffff00689fbec : 0x17dc68ed
+fffffff007185848: BL fffffff007384684 : 0x9407fb8f
+fffffff007185860: BL fffffff00735fa90 : 0x9407688c
+fffffff007185870: BL fffffff00735d5f0 : 0x94075f60
+KPF: Disabled snapshot temporarily
+KPF: Applied patchset in 46 ms
+main: Starting...
+Kernel: Adding root volume seal is broken patch...
+get_root_volume_seal_is_broken_patch: Entering ...
+get_root_volume_seal_is_broken_patch: Found ""root volume seal is broken %p\n"" str loc at 0xd0483b
+get_root_volume_seal_is_broken_patch: Found ""root volume seal is broken %p\n"" xref at 0x1c8e250
+get_root_volume_seal_is_broken_patch: Found tbnz at 0x1c8e218
+get_root_volume_seal_is_broken_patch: Patching tbnz at 0x1c8e218
+get_root_volume_seal_is_broken_patch: Patched tbnz at 0x1c8e218
+Kernel: Adding launchd patch...
+launchd_path_patch: Found "/sbin/launchd" str loc at 0x70653
+launchd_path_patch: Patching launchd at 0x70653
+main: Writing out patched file to work/kcache.patched2...
+main: Quitting...
+Reading work/kcache.patched2...
+Compressing payload using LZSS...
+IM4P outputted to: work/kcache.im4p
+krnl
+[*] Custom kernelcache now exists!
+mount_apfs: volume could not be mounted: Resource busy
+[*] Copying files to rootfs
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100 72.8M  100 72.8M    0     0  2683k      0  0:00:27  0:00:27 --:--:-- 12.1M
+Archive:  loader.zip
+  inflating: ./palera1n.ipa          
+Archive:  palera1n.ipa
+   creating: ./Payload/
+   creating: ./Payload/palera1nLoader.app/
+  inflating: ./Payload/palera1nLoader.app/straprepo.deb  
+  inflating: ./Payload/palera1nLoader.app/safemode.deb  
+  inflating: ./Payload/palera1nLoader.app/palera1nHelper  
+  inflating: ./Payload/palera1nLoader.app/libswift.deb  
+  inflating: ./Payload/palera1nLoader.app/AppIcon60x60@2x.png  
+  inflating: ./Payload/palera1nLoader.app/sileo.deb  
+  inflating: ./Payload/palera1nLoader.app/palera1nLoader  
+  inflating: ./Payload/palera1nLoader.app/preferenceloader.deb  
+  inflating: ./Payload/palera1nLoader.app/zebra.deb  
+  inflating: ./Payload/palera1nLoader.app/Assets.car  
+  inflating: ./Payload/palera1nLoader.app/AppIcon76x76@2x~ipad.png  
+  inflating: ./Payload/palera1nLoader.app/bootstrap.tar  
+  inflating: ./Payload/palera1nLoader.app/substitute.deb  
+  inflating: ./Payload/palera1nLoader.app/cydia.deb  
+  inflating: ./Payload/palera1nLoader.app/Info.plist  
+ extracting: ./Payload/palera1nLoader.app/PkgInfo  
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100 20930  100 20930    0     0  36749      0 --:--:-- --:--:-- --:--:-- 36719
+Archive:  rfs.zip
+  inflating: ./rootfs.zip            
+Archive:  rootfs.zip
+  inflating: ./launchd               
+  inflating: ./jb.dylib              
+  inflating: ./jbinit                
+  inflating: ./jbloader              
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100 18.2M  100 18.2M    0     0  11.4M      0  0:00:01  0:00:01 --:--:-- 11.4M
+bin/
+bin/cat
+bin/launchctl
+bin/pwd
+bin/sleep
+bin/stty
+bin/date
+bin/bash
+bin/kill
+bin/sh
+bin/dd
+bin/mkdir
+bin/hostname
+bin/rmdir
+bin/mv
+bin/ln
+bin/ls
+bin/cp
+bin/sync
+bin/chmod
+bin/rm
+dropbear_rsa_host_key
+etc/
+etc/ssl
+etc/profile
+etc/motd
+Library/
+Library/LaunchDaemons/
+Library/LaunchDaemons/dropbear.plist
+mnt/
+sbin/
+sbin/md5
+sbin/ping
+sbin/shutdown
+sbin/ifconfig
+sbin/umount
+sbin/mknod
+sbin/dmesg
+usr/
+usr/bin/
+usr/sbin/
+usr/local/
+usr/lib/
+usr/share/
+usr/share/tabset/
+usr/share/terminfo/
+usr/share/terminfo/61
+usr/share/terminfo/67
+usr/share/terminfo/r/
+usr/share/terminfo/u/
+usr/share/terminfo/45
+usr/share/terminfo/73
+usr/share/terminfo/g/
+usr/share/terminfo/74
+usr/share/terminfo/t/
+usr/share/terminfo/s/
+usr/share/terminfo/75
+usr/share/terminfo/a/
+usr/share/terminfo/72
+usr/share/terminfo/6b
+usr/share/terminfo/65
+usr/share/terminfo/6d
+usr/share/terminfo/6c
+usr/share/terminfo/63
+usr/share/terminfo/64
+usr/share/terminfo/m/
+usr/share/terminfo/41
+usr/share/terminfo/c/
+usr/share/terminfo/70
+usr/share/terminfo/d/
+usr/share/terminfo/v/
+usr/share/terminfo/x/
+usr/share/terminfo/E/
+usr/share/terminfo/76
+usr/share/terminfo/k/
+usr/share/terminfo/l/
+usr/share/terminfo/78
+usr/share/terminfo/p/
+usr/share/terminfo/p/pcansi-43-m
+usr/share/terminfo/p/putty-vt100
+usr/share/terminfo/p/putty
+usr/share/terminfo/p/putty+fnkeys+xterm
+usr/share/terminfo/p/pcansi-43
+usr/share/terminfo/p/pcansi-33
+usr/share/terminfo/p/putty+fnkeys+vt400
+usr/share/terminfo/p/pcansi-25-m
+usr/share/terminfo/p/pcansi-m
+usr/share/terminfo/p/putty-m1
+usr/share/terminfo/p/putty+fnkeys
+usr/share/terminfo/p/putty-256color
+usr/share/terminfo/p/pcansi-mono
+usr/share/terminfo/p/putty+fnkeys+vt100
+usr/share/terminfo/p/putty-sco
+usr/share/terminfo/p/putty+fnkeys+esc
+usr/share/terminfo/p/putty-m1b
+usr/share/terminfo/p/pcansi
+usr/share/terminfo/p/putty-noapp
+usr/share/terminfo/p/putty+fnkeys+linux
+usr/share/terminfo/p/pcansi-25
+usr/share/terminfo/p/putty+fnkeys+sco
+usr/share/terminfo/p/putty-m2
+usr/share/terminfo/p/pcansi-33-m
+usr/share/terminfo/l/linux-m2
+usr/share/terminfo/l/linux-lat
+usr/share/terminfo/l/linux-koi8r
+usr/share/terminfo/l/linux-16color
+usr/share/terminfo/l/linux-vt
+usr/share/terminfo/l/linux-basic
+usr/share/terminfo/l/linux
+usr/share/terminfo/l/linux-m1
+usr/share/terminfo/l/linux-c-nc
+usr/share/terminfo/l/linux-m1b
+usr/share/terminfo/l/linux-c
+usr/share/terminfo/l/linux-m
+usr/share/terminfo/l/linux-nic
+usr/share/terminfo/l/linux-koi8
+usr/share/terminfo/k/konsole-vt100
+usr/share/terminfo/k/konsole-direct
+usr/share/terminfo/k/konsole-base
+usr/share/terminfo/k/konsole-vt420pc
+usr/share/terminfo/k/konsole
+usr/share/terminfo/k/konsole-solaris
+usr/share/terminfo/k/konsole-linux
+usr/share/terminfo/k/konsole-16color
+usr/share/terminfo/k/konsole+pcfkeys
+usr/share/terminfo/k/konsole-xf3x
+usr/share/terminfo/k/konsole-256color
+usr/share/terminfo/k/konsole-xf4x
+usr/share/terminfo/E/Eterm-88color
+usr/share/terminfo/E/Eterm
+usr/share/terminfo/E/Eterm-256color
+usr/share/terminfo/E/Eterm-color
+usr/share/terminfo/x/xterm-256color
+usr/share/terminfo/x/xterm+r6f2
+usr/share/terminfo/x/xterm+x10mouse
+usr/share/terminfo/x/xterm-color
+usr/share/terminfo/x/xterm-16color
+usr/share/terminfo/x/xterm-xf86-v40
+usr/share/terminfo/x/xterm+direct2
+usr/share/terminfo/x/xterm+app+pc
+usr/share/terminfo/x/xterm+88color
+usr/share/terminfo/x/xterm+pce2
+usr/share/terminfo/x/xterm+noapp+pc
+usr/share/terminfo/x/xterm+app
+usr/share/terminfo/x/xterm-8bit
+usr/share/terminfo/x/xterm+pcf3
+usr/share/terminfo/x/xterm-xi
+usr/share/terminfo/x/xterm+pcc0
+usr/share/terminfo/x/xterm-x11hilite
+usr/share/terminfo/x/xterm+pcf2
+usr/share/terminfo/x/xterm
+usr/share/terminfo/x/xterm+pce3
+usr/share/terminfo/x/xterm+noapp
+usr/share/terminfo/x/xterm-basic
+usr/share/terminfo/x/xterm+x11mouse
+usr/share/terminfo/x/xterm+pcc1
+usr/share/terminfo/x/xterm-r6
+usr/share/terminfo/x/xterm-88color
+usr/share/terminfo/x/xterm-direct2
+usr/share/terminfo/x/xterm+decedit
+usr/share/terminfo/x/xterm-utf8
+usr/share/terminfo/x/xterm+x11hilite
+usr/share/terminfo/x/xterm-vi
+usr/share/terminfo/x/xterm+alt+title
+usr/share/terminfo/x/xterm-rep
+usr/share/terminfo/x/xterm+direct
+usr/share/terminfo/x/xterm-xf86-v333
+usr/share/terminfo/x/xterm-xfree86
+usr/share/terminfo/x/xterm-vt220
+usr/share/terminfo/x/xterm-hp
+usr/share/terminfo/x/xterm-new
+usr/share/terminfo/x/xterm-noapp
+usr/share/terminfo/x/xterm+pc+edit
+usr/share/terminfo/x/xterm-1003
+usr/share/terminfo/x/xterm+sl-twm
+usr/share/terminfo/x/xterm+sm+1003
+usr/share/terminfo/x/xterm-pcolor
+usr/share/terminfo/x/xterm+sm+1002
+usr/share/terminfo/x/xterm+sm+1005
+usr/share/terminfo/x/xterm-debian
+usr/share/terminfo/x/xterm-1005
+usr/share/terminfo/x/xterm-direct
+usr/share/terminfo/x/xterm-1002
+usr/share/terminfo/x/xterm-sco
+usr/share/terminfo/x/xterm+256setaf
+usr/share/terminfo/x/xterm+vt+edit
+usr/share/terminfo/x/xterm-ic
+usr/share/terminfo/x/xterm+kbs
+usr/share/terminfo/x/xterm-x11mouse
+usr/share/terminfo/x/xterm-xf86-v43
+usr/share/terminfo/x/xterm-xf86-v44
+usr/share/terminfo/x/xterm+pcc3
+usr/share/terminfo/x/xterm-24
+usr/share/terminfo/x/xterm+pcfN
+usr/share/terminfo/x/xterm-xmc
+usr/share/terminfo/x/xterm-old
+usr/share/terminfo/x/xterm+pce1
+usr/share/terminfo/x/xterm-x10mouse
+usr/share/terminfo/x/xterm+pcf0
+usr/share/terminfo/x/xterm+256color
+usr/share/terminfo/x/xterm-r5
+usr/share/terminfo/x/xterm+titlestack
+usr/share/terminfo/x/xterm+pcc2
+usr/share/terminfo/x/xterm+pcf1
+usr/share/terminfo/x/xterm+pce0
+usr/share/terminfo/x/xterm-mono
+usr/share/terminfo/x/xterm-65
+usr/share/terminfo/x/xterm-nrc
+usr/share/terminfo/x/xterm+pcfkeys
+usr/share/terminfo/x/xterm-boldso
+usr/share/terminfo/x/xterm+sl
+usr/share/terminfo/x/xterm+edit
+usr/share/terminfo/x/xterm-sun
+usr/share/terminfo/x/xterm-bold
+usr/share/terminfo/x/xterm+tmux
+usr/share/terminfo/x/xterm-nic
+usr/share/terminfo/x/xterm-vt52
+usr/share/terminfo/x/xterm-xf86-v32
+usr/share/terminfo/x/xterm+sm+1006
+usr/share/terminfo/x/xterm+indirect
+usr/share/terminfo/x/xterm-1006
+usr/share/terminfo/x/xterm+alt1049
+usr/share/terminfo/x/xterm-xf86-v33
+usr/share/terminfo/x/xterm+noalt
+usr/share/terminfo/v/vt102
+usr/share/terminfo/v/vt100-putty
+usr/share/terminfo/v/vt100-nav-w
+usr/share/terminfo/v/vt100-s
+usr/share/terminfo/v/vt102-w
+usr/share/terminfo/v/vt102-nsgr
+usr/share/terminfo/v/vt100+
+usr/share/terminfo/v/vt220+keypad
+usr/share/terminfo/v/vt100+4bsd
+usr/share/terminfo/v/vt220
+usr/share/terminfo/v/vt100-vb
+usr/share/terminfo/v/vt220-nam
+usr/share/terminfo/v/vt100+enq
+usr/share/terminfo/v/vt220-w
+usr/share/terminfo/v/vt102+enq
+usr/share/terminfo/v/vt100-s-top
+usr/share/terminfo/v/vt220-8bit
+usr/share/terminfo/v/vt100-nam-w
+usr/share/terminfo/v/vt220-js
+usr/share/terminfo/v/vt100+fnkeys
+usr/share/terminfo/v/vt100-w
+usr/share/terminfo/v/vt52
+usr/share/terminfo/v/vt100
+usr/share/terminfo/v/vt100-w-nav
+usr/share/terminfo/v/vt100-bot-s
+usr/share/terminfo/v/vt100-w-nam
+usr/share/terminfo/v/vt100+pfkeys
+usr/share/terminfo/v/vt100-top-s
+usr/share/terminfo/v/vt100-nav
+usr/share/terminfo/v/vt100-nam
+usr/share/terminfo/v/vt100-bm-o
+usr/share/terminfo/v/vt220-8
+usr/share/terminfo/v/vt220-old
+usr/share/terminfo/v/vt100+keypad
+usr/share/terminfo/v/vt100-am
+usr/share/terminfo/v/vt100-s-bot
+usr/share/terminfo/v/vt100-w-am
+usr/share/terminfo/v/vt100-bm
+usr/share/terminfo/d/dumb
+usr/share/terminfo/d/dumb-emacs-ansi
+usr/share/terminfo/c/cons25-koi8r-m
+usr/share/terminfo/c/cons25-m
+usr/share/terminfo/c/cons25-iso-m
+usr/share/terminfo/c/cons25-debian
+usr/share/terminfo/c/cons25-koi8-r
+usr/share/terminfo/c/cons25-iso8859
+usr/share/terminfo/c/cons25
+usr/share/terminfo/c/cygwin
+usr/share/terminfo/m/mach-gnu-color
+usr/share/terminfo/m/mach-gnu
+usr/share/terminfo/m/mach-color
+usr/share/terminfo/m/mach
+usr/share/terminfo/m/mach-bold
+usr/share/terminfo/a/ansi+idl1
+usr/share/terminfo/a/ansi+idc
+usr/share/terminfo/a/apple-soroc
+usr/share/terminfo/a/apple-videx2
+usr/share/terminfo/a/apple-vm80
+usr/share/terminfo/a/apple-videx3
+usr/share/terminfo/a/ansi-mono
+usr/share/terminfo/a/ansi+pp
+usr/share/terminfo/a/ansi+idl
+usr/share/terminfo/a/ansi+csr
+usr/share/terminfo/a/ansi-generic
+usr/share/terminfo/a/ansi+sgr
+usr/share/terminfo/a/ansi+cup
+usr/share/terminfo/a/ansi-emx
+usr/share/terminfo/a/ansi+sgrbold
+usr/share/terminfo/a/ansi+sgrul
+usr/share/terminfo/a/ansi+sgrso
+usr/share/terminfo/a/ansi
+usr/share/terminfo/a/ansi-color-2-emx
+usr/share/terminfo/a/ansi-color-3-emx
+usr/share/terminfo/a/ansi-mtabs
+usr/share/terminfo/a/ansi+sgrdim
+usr/share/terminfo/a/apple-uterm-vb
+usr/share/terminfo/a/apple-ae
+usr/share/terminfo/a/ansi+erase
+usr/share/terminfo/a/apple-uterm
+usr/share/terminfo/a/ansi+rep
+usr/share/terminfo/a/ansi+idc1
+usr/share/terminfo/a/ansi+tabs
+usr/share/terminfo/a/ansi+local1
+usr/share/terminfo/a/ansi+rca
+usr/share/terminfo/a/ansi-mini
+usr/share/terminfo/a/ansi+enq
+usr/share/terminfo/a/ansi-nt
+usr/share/terminfo/a/ansi-mr
+usr/share/terminfo/a/ansi.sys
+usr/share/terminfo/a/ansi.sys-old
+usr/share/terminfo/a/apple-videx
+usr/share/terminfo/a/ansi.sysk
+usr/share/terminfo/a/apple-80
+usr/share/terminfo/a/Apple_Terminal
+usr/share/terminfo/a/ansi+inittabs
+usr/share/terminfo/a/ansi+local
+usr/share/terminfo/a/ansi-m
+usr/share/terminfo/a/ansi+arrows
+usr/share/terminfo/s/screen.minitel1b-nb
+usr/share/terminfo/s/screen-16color
+usr/share/terminfo/s/sun-17
+usr/share/terminfo/s/screen.putty
+usr/share/terminfo/s/sun
+usr/share/terminfo/s/screen.konsole-256color
+usr/share/terminfo/s/screen.putty-m1
+usr/share/terminfo/s/screen-16color-bce-s
+usr/share/terminfo/s/screen-256color-bce
+usr/share/terminfo/s/screen.minitel12-80
+usr/share/terminfo/s/screen.putty-m1b
+usr/share/terminfo/s/sun-cgsix
+usr/share/terminfo/s/screen.konsole
+usr/share/terminfo/s/screen.rxvt
+usr/share/terminfo/s/sun-type4
+usr/share/terminfo/s/screen.linux-m1b
+usr/share/terminfo/s/sun-e-s
+usr/share/terminfo/s/sun-cmd
+usr/share/terminfo/s/screen.gnome
+usr/share/terminfo/s/screen.xterm-r6
+usr/share/terminfo/s/sun-c
+usr/share/terminfo/s/screen.vte
+usr/share/terminfo/s/screen.minitel1-nb
+usr/share/terminfo/s/screen-bce.gnome
+usr/share/terminfo/s/screen.linux-m2
+usr/share/terminfo/s/screen-w
+usr/share/terminfo/s/screen.xterm-xfree86
+usr/share/terminfo/s/sun-ss5
+usr/share/terminfo/s/sun-e
+usr/share/terminfo/s/sun-nic
+usr/share/terminfo/s/screen.mlterm-256color
+usr/share/terminfo/s/screen-bce.rxvt
+usr/share/terminfo/s/sun-34
+usr/share/terminfo/s/screen.minitel2-80
+usr/share/terminfo/s/screen.minitel1b
+usr/share/terminfo/s/screen-16color-s
+usr/share/terminfo/s/screen-bce.xterm-new
+usr/share/terminfo/s/screen.linux
+usr/share/terminfo/s/sun-12
+usr/share/terminfo/s/screen-256color-bce-s
+usr/share/terminfo/s/screen+italics
+usr/share/terminfo/s/sun-24
+usr/share/terminfo/s/screen.putty-m2
+usr/share/terminfo/s/screen-bce.linux
+usr/share/terminfo/s/sun-48
+usr/share/terminfo/s/screen
+usr/share/terminfo/s/sun-il
+usr/share/terminfo/s/screen-bce
+usr/share/terminfo/s/screen.xterm-256color
+usr/share/terminfo/s/screen-256color-s
+usr/share/terminfo/s/screen.mlterm
+usr/share/terminfo/s/screen.vte-256color
+usr/share/terminfo/s/screen.putty-256color
+usr/share/terminfo/s/screen-bce.mrxvt
+usr/share/terminfo/s/screen.Eterm
+usr/share/terminfo/s/screen-s
+usr/share/terminfo/s/screen.teraterm
+usr/share/terminfo/s/screen-bce.Eterm
+usr/share/terminfo/s/screen.mrxvt
+usr/share/terminfo/s/screen-16color-bce
+usr/share/terminfo/s/sun-s
+usr/share/terminfo/s/screen.minitel1b-80
+usr/share/terminfo/s/screen.linux-m1
+usr/share/terminfo/s/sun-1
+usr/share/terminfo/s/sun-color
+usr/share/terminfo/s/screen.xterm-new
+usr/share/terminfo/s/screen-256color
+usr/share/terminfo/s/screen+fkeys
+usr/share/terminfo/s/screen-bce.konsole
+usr/share/terminfo/s/sun+sl
+usr/share/terminfo/s/sun-s-e
+usr/share/terminfo/s/screen.minitel1
+usr/share/terminfo/t/tmux-256color
+usr/share/terminfo/t/tmux
+usr/share/terminfo/g/gnome-2012
+usr/share/terminfo/g/gnome+pcfkeys
+usr/share/terminfo/g/gnome-rh72
+usr/share/terminfo/g/gnome-rh80
+usr/share/terminfo/g/gnome-fc5
+usr/share/terminfo/g/gnome
+usr/share/terminfo/g/gnome-2007
+usr/share/terminfo/g/gnome-2008
+usr/share/terminfo/g/gnome-256color
+usr/share/terminfo/g/gnome-rh90
+usr/share/terminfo/g/gnome-rh62
+usr/share/terminfo/u/unknown
+usr/share/terminfo/r/rxvt-xpm
+usr/share/terminfo/r/rxvt-16color
+usr/share/terminfo/r/rxvt-cygwin-native
+usr/share/terminfo/r/rxvt-88color
+usr/share/terminfo/r/rxvt-cygwin
+usr/share/terminfo/r/rxvt-m
+usr/share/terminfo/r/rxvt
+usr/share/terminfo/r/rxvt-color
+usr/share/terminfo/r/rxvt-256color
+usr/share/terminfo/r/rxvt-unicode
+usr/share/terminfo/r/rxvt-basic
+usr/share/terminfo/r/rxvt-unicode-256color
+usr/share/terminfo/r/rxvt+pcfkeys
+usr/share/tabset/vt300
+usr/share/tabset/std
+usr/share/tabset/vt100
+usr/share/tabset/stdcrt
+usr/lib/libpanel.dylib
+usr/lib/libncurses.5.dylib
+usr/lib/libform.5.dylib
+usr/lib/libform.dylib
+usr/lib/terminfo
+usr/lib/libmenu.5.dylib
+usr/lib/libncurses.dylib
+usr/lib/liblzma.5.dylib
+usr/lib/libpanel.5.dylib
+usr/lib/libmenu.dylib
+usr/local/bin/
+usr/local/bin/jtool2
+usr/local/bin/lsdtrip.arm64
+usr/local/bin/netbottom
+usr/local/bin/filemon
+usr/local/bin/procexp
+usr/local/bin/jtool
+usr/sbin/ioreg
+usr/sbin/sysctl
+usr/sbin/taskpolicy
+usr/sbin/dropbear
+usr/sbin/ltop
+usr/sbin/chown
+usr/sbin/kextstat
+usr/bin/bzip2recover
+usr/bin/ldid.old
+usr/bin/tee
+usr/bin/split
+usr/bin/rview
+usr/bin/vim
+usr/bin/toe
+usr/bin/hexdump
+usr/bin/wget
+usr/bin/dropbearmulti
+usr/bin/vi
+usr/bin/xzdec
+usr/bin/infotocap
+usr/bin/lsmp
+usr/bin/dbclient
+usr/bin/du
+usr/bin/fs_usage
+usr/bin/plutil
+usr/bin/renice
+usr/bin/xxd
+usr/bin/captoinfo
+usr/bin/sc_usage
+usr/bin/unxz
+usr/bin/less
+usr/bin/bunzip2
+usr/bin/sed
+usr/bin/xzegrep
+usr/bin/nano
+usr/bin/tset
+usr/bin/seq
+usr/bin/uname
+usr/bin/unlzma
+usr/bin/uicache
+usr/bin/reset
+usr/bin/bzcat
+usr/bin/ex
+usr/bin/xzfgrep
+usr/bin/rvim
+usr/bin/wc
+usr/bin/gzip
+usr/bin/printf
+usr/bin/xz
+usr/bin/tail
+usr/bin/grep
+usr/bin/ncurses5-config
+usr/bin/script
+usr/bin/more
+usr/bin/time
+usr/bin/plconvert
+usr/bin/head
+usr/bin/clear
+usr/bin/tic
+usr/bin/killall
+usr/bin/stat
+usr/bin/snappy
+usr/bin/hexedit
+usr/bin/sqlite3
+usr/bin/infocmp
+usr/bin/xzless
+usr/bin/screen
+usr/bin/arch
+usr/bin/xzcat
+usr/bin/cut
+usr/bin/xargs
+usr/bin/view
+usr/bin/dropbearkey
+usr/bin/xzcmp
+usr/bin/what
+usr/bin/lzcat
+usr/bin/ldid
+usr/bin/chflags
+usr/bin/id
+usr/bin/find
+usr/bin/scp
+usr/bin/true
+usr/bin/dropbearconvert
+usr/bin/tput
+usr/bin/hostinfo
+usr/bin/xzmore
+usr/bin/tar
+usr/bin/xzgrep
+usr/bin/false
+usr/bin/lzma
+usr/bin/login
+usr/bin/which
+usr/bin/bzip2
+usr/bin/passwd
+usr/bin/xzdiff
+usr/bin/nohup
+usr/bin/rnano
+usr/bin/w
+usr/bin/gunzip
+[*] Phase 1 done! Rebooting your device (if it doesn't reboot, you may force reboot)
+[*] Waiting for device in normal mode
+[*] Switching device into recovery mode...
+Telling device with udid <REDACTED> to enter recovery mode.
+Device is successfully switching to recovery mode.
+[*] Waiting for device in recovery mode
+[*] Press any key when ready for DFU mode
+Get ready (0)
+Hold volume down + side button (0)
+Release side button, but keep holding volume down (4)
+[*] Device entered DFU!
+[*] Downloading BuildManifest
+Version: 3fc8c093f4660f6c6e07c0c9214618733da01ffc - 36
+libfragmentzip version: 0.60-120447d0f410dffb49948fa155467fc5d91ca3c8
+init pzb: https://updates.cdn-apple.com/2022FallFCS/fullrestores/012-91805/5531E6FE-EDD1-4A4F-9B8C-4A12A4CD541B/iPhone_4.7_P3_15.7.2_19H218_Restore.ipsw
+init done
+getting: BuildManifest.plist
+100% [===================================================================================================>]
+download succeeded
+[*] Downloading and decrypting iBoot
+Version: 3fc8c093f4660f6c6e07c0c9214618733da01ffc - 36
+libfragmentzip version: 0.60-120447d0f410dffb49948fa155467fc5d91ca3c8
+init pzb: https://updates.cdn-apple.com/2022FallFCS/fullrestores/012-91805/5531E6FE-EDD1-4A4F-9B8C-4A12A4CD541B/iPhone_4.7_P3_15.7.2_19H218_Restore.ipsw
+init done
+getting: Firmware/all_flash/iBoot.d10.RELEASE.im4p
+100% [===================================================================================================>]
+download succeeded
+usb_timeout: 5
+[libusb] Waiting for the USB handle with VID: 0x5AC, PID: 0x1227
+CPID: 0x8010
+Found the USB handle.
+Stage: RESET
+ret: true
+[libusb] Waiting for the USB handle with VID: 0x5AC, PID: 0x1227
+CPID: 0x8010
+Found the USB handle.
+Stage: SPRAY
+ret: true
+[libusb] Waiting for the USB handle with VID: 0x5AC, PID: 0x1227
+CPID: 0x8010
+Found the USB handle.
+Stage: SETUP
+ret: true
+[libusb] Waiting for the USB handle with VID: 0x5AC, PID: 0x1227
+CPID: 0x8010
+Found the USB handle.
+Stage: PATCH
+ret: true
+[libusb] Waiting for the USB handle with VID: 0x5AC, PID: 0x1227
+CPID: 0x8010
+Found the USB handle.
+Now you can boot untrusted images.
+[libusb] Waiting for the USB handle with VID: 0x5AC, PID: 0x1227
+Found the USB handle.
+[*] Patching and signing iBoot
+Version: 7fd877ee7d57a91d2506155752077aad51f896aa-39
+main: Starting...
+iOS 15 iBoot detected!
+getting get_debug_enabled_patch() patch
+getting get_sigcheck_patch() patch
+applying patch=0x1800c0d7c : 000080d2
+applying patch=0x1800c0dc4 : 000080d2
+applying patch=0x1800c29b4 : 200080d2
+main: Writing out patched file to ibot.patched...
+main: Quitting...
+00000001800b0000[0000000000000300]: iboot_base
+00000001800c5ae8[0000000000015ae8]: check_bootmode
+000000018011a96e[000000000006a96e]: bootx_str
+00000001801167e0[00000000000667e0]: bootx_cmd_handler
+0000000180116830[0000000000066830]: go_cmd_handler
+00000001800da51c[000000000002a51c]: zeroBuf
+00000001800d5a18[0000000000025a18]: jumpto_bl
+000000018011b267[000000000006b267]: kc_str
+set bootmode: REMOTE_BOOT(1)
+bootx -> dorwx
+change dorwx_cmd_handler -> 00000001800da51c
+change go_cmd_handler -> 00000001800da5b4
+writing sdram_page1
+writing load_address
+copying payload...
+done
+jumpto_bl_opcode: 140012f9
+kernelcache -> kernelcachd
+writing ibot.patched2...
+none
+[*] Resetting DFU state
+usb_timeout: 5
+[libusb] Waiting for the USB handle with VID: 0x5AC, PID: 0x1227
+Found the USB handle.
+[*] Booting device
+[==================================================] 100.0%
+[==================================================] 100.0%
+
+Done!
+The device should now boot to iOS
+When you unlock the device, it will respring about 30 seconds after
+If this is your first time jailbreaking, open the new palera1n app, then press Install
+Otherwise, press Do All in the settings section of the app
+If you have any issues, please join the Discord server and ask for help: https://dsc.gg/palera1n
+Enjoy!
+
