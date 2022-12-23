@@ -8,7 +8,7 @@
 1. iPhone7 was upgraded from 14.8 -> 15.7.2 :)
 1. Follow this Linux-guide: https://appledb.dev/jailbreak/palera1n.html
 
-**NOTE 1:** During installation there was some problems with `usbmuxd` but I got it sorted out when I ran this command while in error state. Shown below: 
+**NOTE 1:** During installation there was some problems with `usbmuxd` but I got it sorted out when I ran `iproxy` -command, error and command shown below: 
  ```
 ...
 Creating listening port 6413 for device port 22
