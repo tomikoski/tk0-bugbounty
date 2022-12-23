@@ -21,7 +21,7 @@ Error creating socket for listen port 6413: Address not available
 
 **NOTE 2:** Full logs of this slow'ish but still working proceudure can be seen [here](https://raw.githubusercontent.com/tomikoski/tk0-bugbounty/master/iOS/palera1n-installation-logs.txt)
 
-**NOTE 3:** During second time you just need to run single command `sudo ./palera1n.sh --tweaks 15.7.2 --semi-tethere` and semi-tethering will be super fast, under 1 minute (since JB already exists on device)
+**NOTE 3:** During second time you just need to run single command `sudo ./palera1n.sh --tweaks 15.7.2 --semi-tethered` and semi-tethering will be super fast, under 1 minute (since JB already exists on device)
 
 ## Jailbreaking: checkra1n iOS 14.8
 *Using iPhone7 with iOS 14.8*
