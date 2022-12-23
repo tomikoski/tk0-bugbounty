@@ -13,7 +13,7 @@ Error creating socket for listen port 6413: Address not available
 :(at this point I just poped another terminal and ran: `iproxy -s 127.0.0.1 6413:22` which continued installation successfully)
  ```
 
-**NOTICE:** Full logs of this slow'ish but still working proceudure can be seen [here](palera1n-installation-logs.txt)
+**NOTICE:** Full logs of this slow'ish but still working proceudure can be seen [here](https://raw.githubusercontent.com/tomikoski/tk0-bugbounty/master/iOS/palera1n-installation-logs.txt)
 
 ## Jailbreaking: checkra1n iOS 14.8
 *Using iPhone7 with iOS 14.8*
