@@ -2,6 +2,9 @@
 
 ## Jailbreaking: Palera1n iOS 15.7.2
 *Using iPhone7 with iOS 15.7.2*
+
+![palera1n](palera1n.png)
+
 1. iPhone7 was upgraded from 14.8 -> 15.7.2 :)
 1. Follow this Linux-guide: https://appledb.dev/jailbreak/palera1n.html
 
