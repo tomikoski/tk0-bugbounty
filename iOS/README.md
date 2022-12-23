@@ -3,17 +3,20 @@
 ## Jailbreaking: Palera1n iOS 15.7.2
 *Using iPhone7 with iOS 15.7.2*
 1. iPhone7 was upgraded from 14.8 -> 15.7.2 :)
-1. Follow this Linux-guide: https://appledb.dev/jailbreak/palera1n.html. During installation there was some problems with `usbmuxd` but I got it sorted out when I ran this command while in error state. Shown below: 
+1. Follow this Linux-guide: https://appledb.dev/jailbreak/palera1n.html
+
+**NOTE 1:** During installation there was some problems with `usbmuxd` but I got it sorted out when I ran this command while in error state. Shown below: 
  ```
 ...
 Creating listening port 6413 for device port 22
 bind(): Address not available
 Error creating socket for listen port 6413: Address not available
 ...
-:(at this point I just poped another terminal and ran: `iproxy -s 127.0.0.1 6413:22` which continued installation successfully)
  ```
+ At this point after cold sweats, I just popped another terminal and ran: `iproxy -s 127.0.0.1 6413:22` which continued installation successfully
+ 
 
-**NOTICE:** Full logs of this slow'ish but still working proceudure can be seen [here](https://raw.githubusercontent.com/tomikoski/tk0-bugbounty/master/iOS/palera1n-installation-logs.txt)
+**NOTE 2:** Full logs of this slow'ish but still working proceudure can be seen [here](https://raw.githubusercontent.com/tomikoski/tk0-bugbounty/master/iOS/palera1n-installation-logs.txt)
 
 ## Jailbreaking: checkra1n iOS 14.8
 *Using iPhone7 with iOS 14.8*
