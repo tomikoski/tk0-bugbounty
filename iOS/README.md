@@ -4,7 +4,7 @@
 ## Jailbreaking: Palera1n iOS 15.7.3
 *Using iPhone7 with iOS 15.7.3*
 
-<TODO PICTURE>
+![palerain](palerain-15.3.7.PNG)
 
 1. (ALWAYS DO THIS 1st!) Old tweaks removed: `sudo ./palera1n.sh --restorerootfs 15.7.2 --tweaks`. At some point same failure as before with 15.7.2 (see below) and `iproxy -s 127.0.0.1 6413:22` in another terminal fixed it
 1. iPhone7 had pairing problems and could not be recognized, `idevicepair pair` fixed this:
