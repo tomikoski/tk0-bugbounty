@@ -27,7 +27,7 @@ Error creating socket for listen port 6413: Address not available
 [*] Testing for baseband presence
 ...
  ```
-1. See logs for full upgrade [here](https://raw.githubusercontent.com/tomikoski/tk0-bugbounty/master/iOS/palera1n-installation-logs-15.7.3.txt).
+**NOTE 1:***  See logs for full upgrade [here](https://raw.githubusercontent.com/tomikoski/tk0-bugbounty/master/iOS/palera1n-installation-logs-15.7.3.txt).
 
 
 ## Jailbreaking: Palera1n iOS 15.7.2
