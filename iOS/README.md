@@ -20,15 +20,15 @@ ERROR: Could not connect to lockdownd: Invalid HostID (-21)
 1. iPhone7 was upgaded from 15.7.2 -> 15.7.3
 1. Install new: `sudo ./palera1n.sh --tweaks 15.7.3 --semi-tethered`, using manual instructions from `https://ios.cfw.guide/installing-palera1n-legacy/?tab=linux`
 1. At some point this error and once again opening iproxy fixed it: `iproxy -s 127.0.0.1 6413:22`
-```
+ ```
 ...
 bind(): Address not available
 Error creating socket for listen port 6413: Address not available
 [*] Testing for baseband presence
 ...
-```
+ ```
 1. iPhone7 was upgaded from 15.7.2 -> 15.7.3
-
+1. See logs for full upgrade [here](https://raw.githubusercontent.com/tomikoski/tk0-bugbounty/master/iOS/palera1n-installation-logs-15.7.3.txt).
 
 ## Jailbreaking: Palera1n iOS 15.7.2
 *Using iPhone7 with iOS 15.7.2*
