@@ -29,6 +29,8 @@
     ```
 **NOTE 1:**  See logs for full upgrade [here](https://raw.githubusercontent.com/tomikoski/tk0-bugbounty/master/iOS/palera1n-installation-logs-15.7.3.txt).
 
+**NOTE 2:**  If above did not work and you're stuck on older iOS version after Palera1n ("iOS loop"), use iPhone's `Settings -> General -> Erase Content` and repeat
+
 
 ## Jailbreaking: Palera1n iOS 15.7.2
 *Using iPhone7 with iOS 15.7.2*
