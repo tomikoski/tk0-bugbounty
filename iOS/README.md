@@ -4,29 +4,29 @@
 ## Jailbreaking: Palera1n iOS 15.7.3
 *Using iPhone7 with iOS 15.7.3*
 
-![palerain](palerain-15.3.7.PNG)
+![palerain](palera1n-15.3.7.PNG)
 
 1. (ALWAYS DO THIS 1st!) Old tweaks removed: `sudo ./palera1n.sh --restorerootfs 15.7.2 --tweaks`. At some point same failure as before with 15.7.2 (see below) and `iproxy -s 127.0.0.1 6413:22` in another terminal fixed it
 1. iPhone7 had pairing problems and could not be recognized, `idevicepair pair` fixed this:
- ```
-...
-[*] Waiting for devices
-[*] Detected normal mode device
-ERROR: Could not connect to lockdownd: Invalid HostID (-21)
-ERROR: Could not connect to lockdownd: Invalid HostID (-21)
-ERROR: Could not connect to lockdownd: Invalid HostID (-21)
-...
- ```
+    ```
+    ...
+    [*] Waiting for devices
+    [*] Detected normal mode device
+    ERROR: Could not connect to lockdownd: Invalid HostID (-21)
+    ERROR: Could not connect to lockdownd: Invalid HostID (-21)
+    ERROR: Could not connect to lockdownd: Invalid HostID (-21)
+    ...
+    ```
 1. iPhone7 was upgaded from 15.7.2 -> 15.7.3
 1. Install new: `sudo ./palera1n.sh --tweaks 15.7.3 --semi-tethered`, using manual instructions from `https://ios.cfw.guide/installing-palera1n-legacy/?tab=linux`
 1. At some point this error and once again opening iproxy fixed it: `iproxy -s 127.0.0.1 6413:22`
- ```
-...
-bind(): Address not available
-Error creating socket for listen port 6413: Address not available
-[*] Testing for baseband presence
-...
- ```
+    ```
+    ...
+    bind(): Address not available
+    Error creating socket for listen port 6413: Address not available
+    [*] Testing for baseband presence
+    ...
+    ```
 **NOTE 1:**  See logs for full upgrade [here](https://raw.githubusercontent.com/tomikoski/tk0-bugbounty/master/iOS/palera1n-installation-logs-15.7.3.txt).
 
 
