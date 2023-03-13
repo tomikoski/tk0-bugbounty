@@ -1,5 +1,13 @@
 # iOS
 
+ **Table of content:**
+ - [Jailbreaking: Palera1n iOS 15.7.3](#item-1)
+ - [Jailbreaking: Palera1n iOS 15.7.2](#item-2)
+ - [Jailbreaking: checkra1n iOS 14.8](#item-3)
+ - [Decrypting HTTPS traffic](#item-4)
+ - [Decrypting IPA-files](#item-5)
+
+<a id="item-1"></a>
 
 ## Jailbreaking: Palera1n iOS 15.7.3
 *Using iPhone7 with iOS 15.7.3*
@@ -31,6 +39,7 @@
 
 **NOTE 2:**  If above did not work and you're stuck on older iOS version after Palera1n ("iOS loop"), use iPhone's `Settings -> General -> Erase Content` and repeat
 
+<a id="item-2"></a>
 
 ## Jailbreaking: Palera1n iOS 15.7.2
 *Using iPhone7 with iOS 15.7.2*
@@ -57,6 +66,7 @@ Error creating socket for listen port 6413: Address not available
 
 
 
+<a id="item-3"></a>
 
 ## Jailbreaking: checkra1n iOS 14.8
 *Using iPhone7 with iOS 14.8*
@@ -68,8 +78,12 @@ Problem solving:
 * If this doesn't work (exploit does not trigger) - reset iPhone using `erase all content -> everything`. Repeat.
 * If Cydia / apt fails - remove from system and rearm using checkra1n
 
+<a id="item-4"></a>
+
 ## Decrypting HTTPS traffic
 * https://andydavies.me/blog/2019/12/12/capturing-and-decrypting-https-traffic-from-ios-apps/
+
+<a id="item-5"></a>
 
 ## Decrypting IPA-files
 * When running **iOS 14.8 with checkra1n**, https://github.com/AloneMonkey/frida-ios-dump can be used.
