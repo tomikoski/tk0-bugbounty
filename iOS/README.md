@@ -39,6 +39,8 @@
 
 **NOTE 2:**  If above did not work and you're stuck on older iOS version after Palera1n ("iOS loop"), use iPhone's `Settings -> General -> Erase Content` and repeat
 
+**NOTE 3:** During second time (restart of device) you just need to run single command `sudo ./palera1n.sh --tweaks 15.7.3 --semi-tethered` and semi-tethering will be super fast, under 1 minute (since JB already exists on device)
+
 <a id="item-2"></a>
 
 ## Jailbreaking: Palera1n iOS 15.7.2
