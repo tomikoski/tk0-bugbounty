@@ -7,7 +7,7 @@
 1. iPhone7 was upgaded from 15.7.3 -> 15.7.5
 1. Install new: `sudo ./palera1n.sh --tweaks 15.7.5 --semi-tethered`, using manual instructions from `https://ios.cfw.guide/installing-palera1n-legacy/?tab=linux`
 
-**NOTE 1**: Same problems might occur as before (see below for troubleshooting)
+**NOTE**: No logs this time / same problems might occur as before (see below for troubleshooting)
 
 ## Jailbreaking: Palera1n iOS 15.7.3
 *Using iPhone7 with iOS 15.7.3*
