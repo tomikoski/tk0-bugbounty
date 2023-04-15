@@ -3,11 +3,82 @@
 ## Jailbreaking: Palera1n iOS 15.7.5
 *Using iPhone7 with iOS 15.7.3*
 
+### TRY1 - failed
 1. (ALWAYS DO THIS 1st!) Old tweaks removed: `sudo ./palera1n.sh --restorerootfs 15.7.3`. At some point same failure as before with 15.7.2 (see below) and `iproxy -s 127.0.0.1 6413:22` in another terminal fixed it
 1. iPhone7 was upgaded from 15.7.3 -> 15.7.5
 1. Install new: `sudo ./palera1n.sh --tweaks 15.7.5 --semi-tethered`, using manual instructions from `https://ios.cfw.guide/installing-palera1n-legacy/?tab=linux`
+1. This time something went terrible wrong over and over again (dafaq!), idevice entered into eternal DFU-loop and had to do forced restore iOS 15.7.5 and factory reset using Mac:
+![palerain](ios-restore.png)
 
-**NOTE**: No logs this time / same problems might occur as before (see below for troubleshooting)
+### TRY2 - passed!
+1. After above restore, I installed palera1n beta (native binary on ARM macbook): https://ios.cfw.guide/installing-palera1n
+1. Ran quick test `palera1n -I` which gave info about iPhone (works)
+1. Then final jailbreak and arming:
+```
+# using recommended command for: "Devices which have iOS 16 or have more than 10-15GB of storage space free should use palera1n -c -f"
+$ palera1n -c -f
+
+# == palera1n-c ==
+#
+# Made by: Nick Chan, Ploosh, Mineek, Nebula, llsc12
+#
+# Thanks to: dora2ios, pythonplayer, tihmstar, nikias
+# (libimobiledevice), checkra1n team (Siguza, axi0mx, littlelailo
+# et al.), Procursus Team (Hayden Seay, Cameron Katri, Keto et.al)
+
+ - [04/15/23 19:35:00] <Info>: Waiting for devices
+ - [04/15/23 19:35:00] <Info>: Telling device with udid <REDACTED_DEVICE_ID_HERE> to enter recovery mode immediately
+ - [04/15/23 19:35:10] <Info>: Press Enter when ready for DFU mode
+
+Get ready (0)
+Hold volume down + side button (0)
+Hold volume down button (4)
+ - [04/15/23 19:35:25] <Info>: Device entered DFU mode successfully
+ - [04/15/23 19:35:26] <Info>: About to execute checkra1n
+#
+# Checkra1n 0.1337.1
+#
+# Proudly written in nano
+# (c) 2019-2023 Kim Jong Cracks
+#
+#========  Made by  =======
+# argp, axi0mx, danyl931, jaywalker, kirb, littlelailo, nitoTV
+# never_released, nullpixel, pimskeks, qwertyoruiop, sbingner, siguza
+#======== Thanks to =======
+# haifisch, jndok, jonseals, xerub, lilstevie, psychotea, sferrini
+# Cellebrite (ih8sn0w, cjori, ronyrus et al.)
+#==========================
+
+ - [04/15/23 19:35:26] <Verbose>: Starting thread for Apple TV 4K Advanced board
+ - [04/15/23 19:35:26] <Info>: Waiting for DFU mode devices
+ - [04/15/23 19:35:26] <Verbose>: DFU mode device found
+ - [04/15/23 19:35:26] <Info>: Checking if device is ready
+ - [04/15/23 19:35:26] <Verbose>: Attempting to perform checkm8 on 8010 11
+ - [04/15/23 19:35:26] <Info>: Setting up the exploit
+ - [04/15/23 19:35:26] <Verbose>: == checkm8 setup stage ==
+ - [04/15/23 19:35:26] <Verbose>: Entered initial checkm8 state after 1 steps
+ - [04/15/23 19:35:26] <Verbose>: Stalled input endpoint after 1 steps
+ - [04/15/23 19:35:26] <Verbose>: DFU mode device found
+ - [04/15/23 19:35:26] <Verbose>: == checkm8 trigger stage ==
+ - [04/15/23 19:35:29] <Info>: Checkmate!
+ - [04/15/23 19:35:29] <Verbose>: Device should now reconnect in download mode
+ - [04/15/23 19:35:29] <Verbose>: DFU mode device disconnected
+
+( AT THIS POINT MANUALLY REMOVED AND REPLUGGED DEVICE AS INSTRUCTED )
+
+ - [04/15/23 19:35:40] <Info>: Entered download mode
+ - [04/15/23 19:35:40] <Verbose>: Download mode device found
+ - [04/15/23 19:35:40] <Info>: Booting PongoOS...
+ - [04/15/23 19:35:42] <Info>: Found PongoOS USB Device
+ - [04/15/23 19:35:44] <Info>: Booting Kernel...
+ - [04/15/23 19:35:44] <Info>: Please wait up to 10 minutes for the fakefs to be created.
+ - [04/15/23 19:35:44] <Info>: Once the device boots up to iOS, run again without the -c (Create FakeFS) option to jailbreak.
+ ```
+
+**NOTE 1, VERY IMPORTANT:** Finally run: `palera1n -f` to boot FakeFS (JB/rootful)
+
+**NOTE 2:** Would probably work with Linux too (even easier) but didn't test yet :)
+
 
 ## Jailbreaking: Palera1n iOS 15.7.3
 *Using iPhone7 with iOS 15.7.3*
