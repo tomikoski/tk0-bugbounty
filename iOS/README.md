@@ -1,5 +1,11 @@
 # iOS
 
+## Jaibroken phone, what next?
+* Install `PreferenceLoader` from Palera1n repos (DO NOT add extra's for Cydia)
+* Install https://github.com/nabla-c0d3/ssl-kill-switch2 using SSH
+* Enable/Disable cert validation
+
+
 ## Jailbreaking: Palera1n iOS 15.7.5
 *Using iPhone7 with iOS 15.7.3*
 
