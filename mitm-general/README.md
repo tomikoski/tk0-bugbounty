@@ -8,6 +8,6 @@ Setup man-in-the-middle network using external router. Attacks everything except
 * Login + set password
 * Fix NTP (via System menu)
 * Run following `ssh root@192.168.8.1 'ash -s' < uci-firewall`
-* Fire up Burp with invisible proxying using $DAPROXY IP (defined in `uci-firewall`)
+* Fire up Burp with invisible proxying using `$DAPROXY` IP (defined in `uci-firewall`)
 * Should look in [LUCI OpenWrt](http://192.168.8.1/cgi-bin/luci) something like:
 ![port forward rules](firewall.png)
