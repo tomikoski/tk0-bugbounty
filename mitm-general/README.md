@@ -11,3 +11,4 @@ Setup man-in-the-middle network using external router. Attacks everything except
 * Fire up Burp with invisible proxying using `$DAPROXY` IP (defined in `uci-firewall`)
 * Should look in [LUCI OpenWrt](http://192.168.8.1/cgi-bin/luci) something like:
 ![port forward rules](firewall.png)
+* Connect any victim device into `GL-A1300-20d` or `GL-A1300-20d-5G` WiFi and see traffic in Burp
