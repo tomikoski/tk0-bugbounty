@@ -1,7 +1,7 @@
 # MITM in general
 Setup man-in-the-middle network using external router. Attacks everything except proxy IP.
 
-## [GL-iNET](https://www.gl-inet.com/products/gl-a1300/)
+## Usage of [GL-iNET](https://www.gl-inet.com/products/gl-a1300/)
 * Connect any existing LAN to WAN in GL-iNET
 * Reset device / clean install
 * Use in router mode (default)
