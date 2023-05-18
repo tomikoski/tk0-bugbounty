@@ -4,14 +4,18 @@ Something and everything related to Bug Bounties
 ## Android
 * Droid stuff
 
-## Wordlists
-* Suppose to be unique lists 
+## Frida
+* My favorite cheatsheet
 
 ## Fuzzing
-* Brr
+* Machines will go brr
 
 ## iOS
 * Apple stuff
 
-## Frida
-* My favorite cheatsheet
+## MITM
+* Some mitm related attacks
+
+## Wordlists
+* Suppose to be unique lists 
+
