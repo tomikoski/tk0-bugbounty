@@ -13,7 +13,7 @@ Something and everything related to Bug Bounties
 ## iOS
 * Apple stuff
 
-## MITM
+## mitm-general
 * Some mitm related attacks
 
 ## Wordlists
