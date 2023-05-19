@@ -61,3 +61,6 @@ uid=0(root) gid=0(root) groups=0(root) context=u:r:magisk:s0
 1. upload `adb push alwaystrustusercerts.zip /sdcard/Download`
 1. Install via Magisk modules
 1. Reboot device
+1. Add some certificate into Android 'user credentials' store (via sdcard)
+1. Reboot and certificate is moved into System Trust Store
+1. Done
