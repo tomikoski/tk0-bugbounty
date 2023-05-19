@@ -31,6 +31,10 @@ $ cd firmware/bullhead-opm7.181205.001
 $ unzip image-bullhead-opm7.181205.001.zip -d image-bullhead-opm7.181205.001
 $ adb push image-bullhead-opm7.181205.001/boot.img /sdcard/Download
 ```
+## TWRP (bullhead / nexus)
+If TWRP (enhanced recovery) is needed do the following:
+1. reboot phone using POWER+VOLUMEDOWN
+1. run `adb flash recovery twrp.img` (img downloaded from twrp site)
 
 ## Install Magisk boot.img
 1. open magisk, press `Magisk -> install` and select option `Select and Patch a file` to patch uploaded file `/sdcard/Download/boot.img`
