@@ -56,7 +56,7 @@ uid=0(root) gid=0(root) groups=0(root) context=u:r:magisk:s0
 
 ```
 
-## Disable certificate validation (pinning)
+## Disable certificate validation (pinning) using Magisk
 1. Download latest [ MagiskTrustUserCerts](https://github.com/NVISOsecurity/MagiskTrustUserCerts)
 1. upload `adb push alwaystrustusercerts.zip /sdcard/Download`
 1. Install via Magisk modules
