@@ -55,7 +55,7 @@ List of devices attached
 uid=0(root) gid=0(root) groups=0(root) context=u:r:magisk:s0
 
 ```
-**note1:** If above fails or superuser is missing, try the following:
+**note1:** If above fails or superuser is missing _after reboot_, try the following:
 * Install Magisk image via TWRP (recovery) and reboot
 * Magisk will complain 'invalid permissions or something' and then fix this using Magisk Direct install
 
