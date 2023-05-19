@@ -55,6 +55,9 @@ List of devices attached
 uid=0(root) gid=0(root) groups=0(root) context=u:r:magisk:s0
 
 ```
+**note1:** If above fails or superuser is missing, try the following:
+* Install Magisk image via TWRP (recovery) and reboot
+* Magisk will complain 'invalid permissions or something' and then fix this using Magisk Direct install
 
 ## Disable certificate validation (pinning) using Magisk
 1. Download latest [ MagiskTrustUserCerts](https://github.com/NVISOsecurity/MagiskTrustUserCerts)
@@ -64,3 +67,9 @@ uid=0(root) gid=0(root) groups=0(root) context=u:r:magisk:s0
 1. Add some certificate into Android 'user credentials' store (via sdcard)
 1. Reboot and certificate is moved into System Trust Store
 1. Done
+
+## Install Nethunter for Android
+1. Download latest [NetHunter](https://www.kali.org/docs/nethunter/)
+1. Install using TWRP (via recovery) and reboot
+1. Approve superuser to NetHunter via Magisk
+1. Follow post-install from [NetHunter post-install](https://www.kali.org/docs/nethunter/)
