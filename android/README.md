@@ -55,3 +55,9 @@ List of devices attached
 uid=0(root) gid=0(root) groups=0(root) context=u:r:magisk:s0
 
 ```
+
+## Disable certificate validation (pinning)
+1. Download latest [ MagiskTrustUserCerts](https://github.com/NVISOsecurity/MagiskTrustUserCerts)
+1. upload `adb push alwaystrustusercerts.zip /sdcard/Download`
+1. Install via Magisk modules
+1. Reboot device
