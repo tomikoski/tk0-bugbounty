@@ -4,7 +4,7 @@ Nexus 5x (with ram disk) + Pixel4 (with ram disk)
 ## Bricked device (works for Pixel4)?
 1. Download OTA zip
 1. Unzip zip twice (to show all img files) to `./image` for example and `cd image`
-1. This will erase everything once again --> Run from root dir of zip: `ANDROID_PRODUCT_OUT=/home/tk0/android/firmware/flame-tp1a.220624.014/image/ ./flash-all.sh`
+1. This could erase everything --> Run from root dir of zip: `ANDROID_PRODUCT_OUT=/home/tk0/android/firmware/flame-tp1a.220624.014/image/ ./flash-all.sh`
 
 ## Bricked device?
 This should fix MOST of the issues, via https://android.stackexchange.com/a/232528
