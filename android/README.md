@@ -6,7 +6,7 @@ Nexus 5x (with ram disk) + Pixel4 (with ram disk)
 1. Unzip zip twice (to show all img files) to `./image` for example and `cd image`
 1. This could erase everything --> Run from root dir of zip: `ANDROID_PRODUCT_OUT=/home/tk0/android/firmware/flame-tp1a.220624.014/image/ ./flash-all.sh`
 
-## Bricked device?
+## Bricked device (Nexus)?
 This should fix MOST of the issues, via https://android.stackexchange.com/a/232528
 
 Here are the essential steps, more detailed information is in the links above:
@@ -37,7 +37,7 @@ $ unzip image-bullhead-opm7.181205.001.zip -d image-bullhead-opm7.181205.001
 $ adb push image-bullhead-opm7.181205.001/boot.img /sdcard/Download
 ```
 
-## TWRP (bullhead / nexus)
+## TWRP (bullhead / nexus, don't use for Pixel)
 If TWRP (enhanced recovery) is needed do the following:
 1. reboot phone using POWER+VOLUMEDOWN
 1. run `adb flash recovery twrp.img` (img downloaded from twrp site)
