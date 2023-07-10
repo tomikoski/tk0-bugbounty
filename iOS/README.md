@@ -5,6 +5,15 @@
 * Install https://github.com/nabla-c0d3/ssl-kill-switch2 using SSH
 * Enable/Disable cert validation
 
+## (Rooted) Upgrade process: iOS 15.7.5 --> iOS 15.7.7 upgrade process
+1. ARM macbook + USB-A cord with USB-C converter
+1. `palera1n --force-revert`
+1. update normally via iOS 15.7.5 --> 15.7.7
+1. reboot, iPhone7 mandatory setup for passcode etc.
+1. `palera1n -c -f`  #re-create fs
+1. Device boots into "non-rooted" mode, palera1n shows 'install' option
+1. Use palerain app -> install
+1. All done!
 
 ## Jailbreaking: Palera1n iOS 15.7.5
 *Using iPhone7 with iOS 15.7.3*
