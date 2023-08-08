@@ -1,7 +1,9 @@
 #!/bin/sh
 
 ## generate all rules for all ports
-## usage for openwrt: ssh root@192.168.8.1 'ash -s' < uci-firewall-dynamic
+## usage:
+## bash uci-firewall-dynamic > uci-firewall-dynamic-output
+## ssh root@192.168.8.1 'ash -s' < uci-firewall-dynamic-output
 
 # each rule will bypass proxy
 DAPROXY='192.168.8.121'
