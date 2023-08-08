@@ -1,0 +1,59 @@
+#!/bin/sh
+
+## generate all rules for all ports
+## usage for openwrt: ssh root@192.168.8.1 'ash -s' < uci-firewall-dynamic
+
+# each rule will bypass proxy
+DAPROXY='192.168.8.121'
+
+# port list to generate
+LIST=(
+8443
+993
+143
+995
+465
+587
+8883
+443
+5223
+5228
+51234
+)
+
+# generate rules
+for i in ${LIST[@]};
+do
+ echo "#$i wan to lan"
+ echo "uci add firewall redirect"
+ echo "uci set firewall.@redirect[-1]=redirect"
+ echo "uci set firewall.@redirect[-1].proto='tcp'"
+ echo "uci set firewall.@redirect[-1].src_dport='$i'"
+ echo "uci set firewall.@redirect[-1].dest_ip=""$DAPROXY"""
+ echo "uci set firewall.@redirect[-1].src_ip=""!$DAPROXY"""
+ echo "uci set firewall.@redirect[-1].dest_port='8080'"
+ echo "uci set firewall.@redirect[-1].src='wan'"
+ echo "uci set firewall.@redirect[-1].name='mitm-all-$i-wan-to-lan-MAC'"
+ echo "uci set firewall.@redirect[-1].dest='lan'"
+ echo "uci set firewall.@redirect[-1].target='DNAT'"
+ echo ""
+ echo "#$i lan to wan"
+ echo "uci add firewall redirect"
+ echo "uci set firewall.@redirect[-1]=redirect"
+ echo "uci set firewall.@redirect[-1].proto='tcp'"
+ echo "uci set firewall.@redirect[-1].src_dport='$i'"
+ echo "uci set firewall.@redirect[-1].dest_ip=""$DAPROXY"""
+ echo "uci set firewall.@redirect[-1].src_ip=""!$DAPROXY"""
+ echo "uci set firewall.@redirect[-1].dest_port='8080'"
+ echo "uci set firewall.@redirect[-1].src='lan'"
+ echo "uci set firewall.@redirect[-1].name='mitm-all-$i-lan-to-wan-MAC'"
+ echo "uci set firewall.@redirect[-1].dest='wan'"
+ echo "uci set firewall.@redirect[-1].target='DNAT'"
+ echo ""
+done
+
+echo "#commit"
+echo "uci commit firewall"
+echo ""
+echo "#restart"
+echo "/etc/init.d/firewall restart"
