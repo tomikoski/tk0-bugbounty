@@ -11,8 +11,9 @@
 1. update normally via iOS 15.7.5 --> 15.7.7
 1. reboot, iPhone7 mandatory setup for passcode etc.
 1. `palera1n --force-revert -c -f` # force re-create BakeFS
-1. Device boots into "non-rooted" mode, palera1n shows 'install' option
+1. Device boots into "non-rooted" mode
 1. `palera1n -f`
+1. Device boots into "non-rooted" mode, NOW palera1n exists and shows 'install' option
 1. Use palerain app -> install
 1. All done!
 
