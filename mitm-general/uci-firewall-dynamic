@@ -7,6 +7,7 @@
 
 # each rule will bypass proxy
 DAPROXY='192.168.8.121'
+DAPORT="8080"
 
 # port list to generate
 LIST=(
@@ -33,7 +34,7 @@ do
  echo "uci set firewall.@redirect[-1].src_dport='$i'"
  echo "uci set firewall.@redirect[-1].dest_ip=""$DAPROXY"""
  echo "uci set firewall.@redirect[-1].src_ip=""!$DAPROXY"""
- echo "uci set firewall.@redirect[-1].dest_port='8080'"
+ echo "uci set firewall.@redirect[-1].dest_port='$DAPORT'"
  echo "uci set firewall.@redirect[-1].src='wan'"
  echo "uci set firewall.@redirect[-1].name='mitm-all-$i-wan-to-lan-MAC'"
  echo "uci set firewall.@redirect[-1].dest='lan'"
@@ -46,7 +47,7 @@ do
  echo "uci set firewall.@redirect[-1].src_dport='$i'"
  echo "uci set firewall.@redirect[-1].dest_ip=""$DAPROXY"""
  echo "uci set firewall.@redirect[-1].src_ip=""!$DAPROXY"""
- echo "uci set firewall.@redirect[-1].dest_port='8080'"
+ echo "uci set firewall.@redirect[-1].dest_port='$DAPORT'"
  echo "uci set firewall.@redirect[-1].src='lan'"
  echo "uci set firewall.@redirect[-1].name='mitm-all-$i-lan-to-wan-MAC'"
  echo "uci set firewall.@redirect[-1].dest='wan'"
