@@ -1,7 +1,9 @@
 # MITM in general
 Setup man-in-the-middle network using external router. Attacks everything except proxy IP.
 
-## Usage of [GL-iNET](https://www.gl-inet.com/products/gl-a1300/)
+## Usage of [GL-iNET](https://www.gl-inet.com/products/gl-a1300/) - MITM iOS/Android
+
+### MITM using GL-iNET adhoc WiFi for 80/443
 * Connect existing LAN cable (with internet access) into WAN-port at GL-iNET
 * Reset device (push reset for 10 secs) / clean install
 * Use in router mode (default)
@@ -12,3 +14,11 @@ Setup man-in-the-middle network using external router. Attacks everything except
 * Should look in [LUCI OpenWrt](http://192.168.8.1/cgi-bin/luci) something like:
 ![port forward rules](firewall.png)
 * Connect any victim device into `GL-A1300-20d` or `GL-A1300-20d-5G` WiFi and see traffic in Burp
+
+
+### MITM using GL-iNET AP WiFi for multiple ports
+* Reset device (push reset for 10 secs) / clean install
+* Fix NTP using current network time (via System menu)
+* Use in AP (access point) mode and attach live ISP cable in WAN
+* Connect any victim device into `GL-A1300-20d` or `GL-A1300-20d-5G` WiFi and MITM traffic elsewhere (TO BE UPDATED)
+
