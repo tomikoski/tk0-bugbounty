@@ -1,9 +1,9 @@
 # MITM in general
+
+## Usage of [GL-iNET](https://www.gl-inet.com/products/gl-a1300/)
 Setup man-in-the-middle network using external router. Attacks everything except proxy IP.
 
-## Usage of [GL-iNET](https://www.gl-inet.com/products/gl-a1300/) - MITM iOS/Android
-
-### MITM using GL-iNET adhoc WiFi for 80/443
+### MITM using GL-iNET adhoc WiFi for 80/443 - MITM iOS/Android
 * Connect existing LAN cable (with internet access) into WAN-port at GL-iNET
 * Reset device (push reset for 10 secs) / clean install
 * Use in router mode (default)
@@ -16,7 +16,9 @@ Setup man-in-the-middle network using external router. Attacks everything except
 * Connect any victim device into `GL-A1300-20d` or `GL-A1300-20d-5G` WiFi and see traffic in Burp
 
 
-### MITM using GL-iNET AP WiFi for multiple ports
+### MITM using GL-iNET AP WiFi for multiple ports - MITM multiple targets
+Setup man-in-the-middle network using external router. Attacks everything except proxy IP.
+
 * Reset device (push reset for 10 secs) / clean install
 * Fix NTP using current network time (via System menu)
 * Use in AP (access point) mode and attach live ISP cable in WAN
