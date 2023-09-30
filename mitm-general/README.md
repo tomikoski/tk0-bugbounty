@@ -21,6 +21,6 @@ Setup man-in-the-middle network using external router. Attacks everything except
 
 * Reset device (push reset for 10 secs) / clean install
 * Fix NTP using current network time (via System menu)
-* Use in AP (access point) mode and attach live ISP cable in WAN
+* Use in AP (access point) mode: `Network -> Network mode -> Access Point`, and attach live ISP cable in WAN
 * Connect any victim device into `GL-A1300-20d` or `GL-A1300-20d-5G` WiFi and MITM traffic elsewhere (TO BE UPDATED)
 
