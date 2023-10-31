@@ -71,6 +71,8 @@ uid=0(root) gid=0(root) groups=0(root) context=u:r:magisk:s0
 * Install Magisk image via TWRP (recovery) and reboot
 * Magisk will complain 'invalid permissions or something' and then fix this using Magisk Direct install
 
+**note2:** If using Pixel Tablet (android 13) - use `init_boot.img` instead of `boot.img`, otherwise same process
+
 ## Disable certificate validation (pinning) using Magisk
 1. Download latest [ MagiskTrustUserCerts](https://github.com/NVISOsecurity/MagiskTrustUserCerts)
 1. upload `adb push alwaystrustusercerts.zip /sdcard/Download`
