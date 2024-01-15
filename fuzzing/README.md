@@ -17,7 +17,7 @@ sudo apt install llvm-16 llvm-16-tools clang-16
 Follow: https://github.com/AFLplusplus/LibAFL
 
 
-## AFL++ for MIPS / ARM etc.
+## Black box fuzzing with AFL++ for MIPS / ARM etc.
 
 Tested on Debian12. Compile AFL++ as normally would.
 
