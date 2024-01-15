@@ -38,3 +38,17 @@ CPU_TARGET=aarch64 ./build_qemu_support.sh
 # fuzz:
 QEMU_LD_PREFIX=/usr/aarch64-linux-gnu $AFLDIR/afl-fuzz -Q -i in -o out -- ./test_arm64 @@
 ```
+
+### Parallel fuzzing (e.g using QEMU)
+```
+#term1, main
+QEMU_LD_PREFIX=/usr/mips-linux-gnu $AFL/afl-fuzz -Q -i in -o out -M fuzz1 -- ./test_mips @@
+
+#term2, secondary 1
+QEMU_LD_PREFIX=/usr/mips-linux-gnu $AFL/afl-fuzz -Q -i in -o out -S fuzz2 -- ./test_mips @@
+
+#term3, secondary 2
+QEMU_LD_PREFIX=/usr/mips-linux-gnu $AFL/afl-fuzz -Q -i in -o out -S fuzz3 -- ./test_mips @@
+...
+...
+```
