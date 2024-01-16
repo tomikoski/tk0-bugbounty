@@ -72,7 +72,7 @@ AFL_INST_LIBS=1 ./afl-fuzz -D -O -i in -o frida-out -- ./harness @@
 Adding following entry in GNUMakefile will also help to test:
 ```
 .ONESHELL:
-frida_adhoctest: $(HARNESS_BIN) $(LIB_BIN) $(TESTINSTR_DATA_FILE)
+frida_tomitest: $(HARNESS_BIN) $(LIB_BIN) $(TESTINSTR_DATA_FILE)
 	cd $(BUILD_DIR) && \
 	AFL_INST_LIBS=1 \
 	$(ROOT)afl-fuzz \
@@ -81,7 +81,8 @@ frida_adhoctest: $(HARNESS_BIN) $(LIB_BIN) $(TESTINSTR_DATA_FILE)
 		-i $(TESTINSTR_DATA_DIR) \
 		-o $(FRIDA_OUT) \
 		-- \
-			$(HARNESS_BIN) ../test1.dat
+			$(HARNESS_BIN) $(TESTINSTR_DATA_FILE)
+
 ```
 
 Then prepare and recompile with:
