@@ -59,6 +59,13 @@ QEMU_LD_PREFIX=/usr/mips-linux-gnu $AFL/afl-fuzz -Q -i in -o out -S fuzz3 -- ./t
 ```
 cd AFLplusplus/frida_mode/test/osx-lib
 make frida_persistent
+
+# make will fail due to the ASLR blocking, since using:
+# 	AFL_FRIDA_PERSISTENT_ADDR=0x0000000100003B88 \
+#	AFL_FRIDA_PERSISTENT_CNT=1000000 \
+#	AFL_ENTRYPOINT=0x0000000100003B88 \
+
+# let's rerun using just AFL_INST_LIBS=1
 AFL_INST_LIBS=1 ./afl-fuzz -D -O -i in -o frida-out -- ./harness @@
 ```
 
