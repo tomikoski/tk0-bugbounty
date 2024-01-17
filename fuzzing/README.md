@@ -56,6 +56,15 @@ QEMU_LD_PREFIX=/usr/mips-linux-gnu $AFL/afl-fuzz -Q -i in -o out -S fuzz3 -- ./t
 ## Fuzzing with macOS (M1/ARM)
 
 ### Binary fuzzing using Frida
+Compile AFLplusplus:
+```
+cd AFLplusplus
+gmake
+cd frida_mode
+gmake
+```
+
+Compile examples:
 ```
 cd AFLplusplus/frida_mode/test/osx-lib
 make frida_persistent
