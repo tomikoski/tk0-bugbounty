@@ -68,7 +68,6 @@ Fuzz using:
 AFL_INST_LIBS=1 ~/Documents/git/AFLplusplus/afl-fuzz -D -n -i in -o out -- ./somemacosbinary @@
 ```
 
-
 ### Binary fuzzing using Frida
 Compile AFLplusplus:
 ```
@@ -116,4 +115,34 @@ make clean
 make frida_adhoctest
 
 # fuzzing starts with 'AFLplusplus/frida_mode/test/osx-lib/test1.dat'
+```
+
+### Binary fuzzing with fpicker
+fpicker can be found here: https://github.com/ttdennis/fpicker
+
+Compile AFLplusplus
+```
+export PATH="/opt/homebrew/Cellar/llvm/17.0.6/bin:/opt/homebrew/Cellar/coreutils/9.4/bin":$PATH
+
+# basically uses: CFLAGS="-DUSEMMAP=1"
+cd AFLplusplus
+TEST_MMAP=1 gmake
+
+cd frida_mode
+TEST_MMAP=1 gmake
+```
+
+Fuzz with fpicker
+```
+cd fpicker
+frida-compile -v examples/test/test-fuzzer.js -o harness.js
+
+# pwd: HOME/fpicker
+# terminal 1
+# start app
+
+./examples/test/test 123
+
+#terminal 2
+$AFLDIR/afl-fuzz -i examples/test/in/ -o examples/test/out -- ./fpicker --fuzzer-mode afl -e attach -p test -f harness.js
 ```
