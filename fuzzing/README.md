@@ -144,5 +144,5 @@ frida-compile -v examples/test/test-fuzzer.js -o harness.js
 ./examples/test/test 123
 
 #terminal 2
-$AFLDIR/afl-fuzz -i examples/test/in/ -o examples/test/out -- ./fpicker --fuzzer-mode afl -e attach -p test -f harness.js
+$AFLDIR/afl-fuzz -D -i examples/test/in/ -o examples/test/out -- ./fpicker --fuzzer-mode afl -e attach -p test -f harness.js
 ```
