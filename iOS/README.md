@@ -9,6 +9,7 @@
 __Follow this flow, works 100%__
 * --> Update: 2024/05 tested with 17.x, iPhone8, still works
 
+1. Check for new palera1n release from their [repos](https://github.com/palera1n/palera1n/releases)
 1. ARM macbook + USB-A cord with USB-C converter
 1. `palera1n --force-revert`
 1. update normally via iOS 15.7.5 --> 15.7.7
