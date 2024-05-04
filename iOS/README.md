@@ -99,6 +99,8 @@ Hold volume down button (4)
 
 **NOTE 3:** If ever stuck in Apple logo (during 'checkmate triggered, booting'), just: `When the apple logo appears on your iPhone, quickly remove and insert lightning cable ,it should recognize PongoOS and continue with jailbreak` (ref: https://www.reddit.com/r/jailbreak/comments/12fou0j/comment/jfi8r7n/)
 
+**NOTE 4:** If using new device (vanilla not JB), it might take couple of tries before first JB triggers
+
 
 ## Jailbreaking: Palera1n iOS 15.7.3
 *Using iPhone7 with iOS 15.7.3*
