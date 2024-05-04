@@ -5,9 +5,9 @@
 * Install https://github.com/nabla-c0d3/ssl-kill-switch2 using SSH
 * Enable/Disable cert validation
 
-## (Rooted) Normal upgrade process, example: iOS 15.7.5 --> iOS 15.7.7 
+## (Jailbroken) Normal upgrade process, example: iOS 15.7.5 --> iOS 15.7.7 
 __Follow this flow, works 100%__
-* Update: 2024/05 tested with 17.x, iPhone8, still works
+* --> Update: 2024/05 tested with 17.x, iPhone8, still works
 
 1. ARM macbook + USB-A cord with USB-C converter
 1. `palera1n --force-revert`
