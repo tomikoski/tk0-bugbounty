@@ -5,7 +5,7 @@
 * Install https://github.com/nabla-c0d3/ssl-kill-switch2 using SSH
 * Enable/Disable cert validation
 
-## (Jailbroken) Normal upgrade process, example: iOS 15.7.5 --> iOS 15.7.7 
+## New device install, tested with 16.7.8 (2024/06)
 * --> Update: 2024/05 tested with 17.x, iPhone8, still works
 
 1. Use M1 macbook with USB2(!) cable and USB-A to USB-C converter
