@@ -10,11 +10,11 @@
 
 1. Use M1 macbook with USB2(!) cable and USB-A to USB-C converter
 1. Install latest(!) palera1n
-1. Run `palera1n` (without any options
+1. Run `palera1n` (without any options!)
 1. Rememeber to remove USB-cable from mobile side(!) during bootup Apple logo *sigh*
 1. All done!
 
-**NOTE 1:**  If `ssh -p root@localhost` doesn't work with 'alpine' password, install newterm and `sudo passwd root` (enter password set during Sileo install for user `mobile`)
+**NOTE 1:**  If `ssh -p root@localhost` doesn't work with 'alpine' password, install newterm and `sudo passwd root` (enter password set during Sileo install for user `mobile`). This will setup root access.
 
 ## (Jailbroken) Normal upgrade process, example: iOS 15.7.5 --> iOS 15.7.7 
 
