@@ -6,8 +6,15 @@
 * Enable/Disable cert validation
 
 ## (Jailbroken) Normal upgrade process, example: iOS 15.7.5 --> iOS 15.7.7 
-__Follow this flow, works 100%__
 * --> Update: 2024/05 tested with 17.x, iPhone8, still works
+
+1. Use M1 macbook with USB2(!) cable and USB-A to USB-C converter
+1. Install latest(!) palera1n
+1. Run `palera1n` (without any options
+1. Rememeber to remove USB-cable from mobile side(!) during bootup Apple logo *sigh*
+1. All done!
+
+## (Jailbroken) Normal upgrade process, example: iOS 15.7.5 --> iOS 15.7.7 
 
 1. Check for new palera1n release from their [repos](https://github.com/palera1n/palera1n/releases)
 1. ARM macbook + USB-A cord with USB-C converter
