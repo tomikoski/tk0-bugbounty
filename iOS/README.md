@@ -17,6 +17,7 @@
 1. Install latest(!) palera1n
 1. Run `palera1n` (without any options!)
 1. Rememeber to remove USB-cable from mobile side(!) during bootup Apple logo *sigh*
+1. After bootup, just wait apps (Palera1n, Sileo, ...) to appear (might take 1-3mins)
 1. All done!
 
 **NOTE 1:**  If `ssh -p root@localhost` doesn't work with 'alpine' password, install newterm and `sudo passwd root` (enter password set during Sileo install for user `mobile`). This will setup root access.
