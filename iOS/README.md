@@ -5,7 +5,7 @@
 ### iPhone8 -> follow this:
 * Install: https://github.com/NyaMisty/ssl-kill-switch3
 * Enable/Disable cert validation
-* Enable full logging (ref: https://github.com/EthanArbuckle/unredact-private-os_logs):
+* Enable full logging (ref: https://github.com/EthanArbuckle/unredact-private-os_logs) from iPhone:
   * copy/edit file into: /Library/Preferences/Logging/com.apple.system.logging.plist 
     ```xml
     <?xml version="1.0" encoding="UTF-8" ?>
