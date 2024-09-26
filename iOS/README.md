@@ -7,13 +7,10 @@
 * Enable/Disable cert validation
 * Enable full logging (ref: https://github.com/EthanArbuckle/unredact-private-os_logs)
  ```
+ # 1. copy/edit file into: /Library/Preferences/Logging/com.apple.system.logging.plist
+
  <?xml version="1.0" encoding="UTF-8" ?>
  <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-
- <!--
- copy/edit into:
- /Library/Preferences/Logging/com.apple.system.logging.plist
- -->
 
  <plist version="1.0">
  <dict>
@@ -23,6 +20,9 @@
  </dict>
 
  </plist>
+
+ # 2. kill logd to restart using new settings:
+ killall -9 logd
  ```
 * TODO
 
