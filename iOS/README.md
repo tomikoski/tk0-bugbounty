@@ -1,6 +1,6 @@
 # iOS
 
-## Jaibroken phone, what next?
+## Jaibroken phone, now what...?
 
 ### iPhone8 -> follow this:
 * Install: https://github.com/NyaMisty/ssl-kill-switch3
