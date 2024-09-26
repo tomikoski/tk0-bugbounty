@@ -24,6 +24,7 @@
 
  </plist>
  ```
+* TODO
 
 ### iPhone7 -> follow this:
 * Install `PreferenceLoader` from Palera1n repos (DO NOT add extra's for Cydia)
