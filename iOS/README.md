@@ -6,7 +6,7 @@
 * Install: https://github.com/NyaMisty/ssl-kill-switch3
 * Enable/Disable cert validation
 * Enable full logging (ref: https://github.com/EthanArbuckle/unredact-private-os_logs)
-```
+  ```
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 
@@ -23,7 +23,7 @@ copy/edit into:
 </dict>
 
 </plist>
-```
+  ```
 
 ### iPhone7 -> follow this:
 * Install `PreferenceLoader` from Palera1n repos (DO NOT add extra's for Cydia)
