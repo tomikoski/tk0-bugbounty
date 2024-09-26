@@ -5,25 +5,28 @@
 ### iPhone8 -> follow this:
 * Install: https://github.com/NyaMisty/ssl-kill-switch3
 * Enable/Disable cert validation
-* Enable full logging (ref: https://github.com/EthanArbuckle/unredact-private-os_logs)
- ```
- # 1. copy/edit file into: /Library/Preferences/Logging/com.apple.system.logging.plist
+* Enable full logging (ref: https://github.com/EthanArbuckle/unredact-private-os_logs):
+  * copy/edit file into: /Library/Preferences/Logging/com.apple.system.logging.plist 
+    ```xml
+    <?xml version="1.0" encoding="UTF-8" ?>
+    <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 
- <?xml version="1.0" encoding="UTF-8" ?>
- <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+    <plist version="1.0">
+    <dict>
+      <!-- show all data in logs, e.g. via idevicesyslog -->
+      <key>Enable-Private-Data</key>
+      <true/>
+    </dict>
 
- <plist version="1.0">
- <dict>
-   <!-- show all data in logs, e.g. via idevicesyslog -->
-   <key>Enable-Private-Data</key>
-   <true/>
- </dict>
+    </plist>    
+    ``````
 
- </plist>
+  * kill logd to restart using new settings:
 
- # 2. kill logd to restart using new settings:
- killall -9 logd
- ```
+    ```
+    killall -9 logd
+    ```
+
 * TODO
 
 ### iPhone7 -> follow this:
