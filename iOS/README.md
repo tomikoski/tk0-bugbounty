@@ -1,4 +1,9 @@
 # iOS
+Process for jailbreaking iOS devices
+
+1. Install required tools such as `libimobiledevice` and `libusbmuxd` (e.g. homebrew, apt, ...)  
+1. Execute ![JAILBREAK](JAILBREAK.md)
+2. See next possible steps below
 
 ## Jaibroken phone, now what...?
 
