@@ -1,7 +1,7 @@
 # iOS Jailbreak
 Sorted using LATEST to LEGACY
 
-# New device upgrade, tested with 16.7.8 ROOTLESS -> 16.8.10 ROOTLESS
+## New device upgrade, tested with 16.7.8 ROOTLESS -> 16.8.10 ROOTLESS
 * --> Update: 2024/09 tested with iPhone8, still works
 
 1. Open Palera1n from iOS and click REVERT
@@ -12,7 +12,7 @@ Sorted using LATEST to LEGACY
 
 **NOTE 1:**  If `ssh -p root@localhost` doesn't work with 'alpine' password, install newterm and `sudo passwd root` (enter password set during Sileo install for user `mobile`). This will setup root access.
 
-# New device install, tested with 16.7.8 (2024/06), ROOTLESS
+## New device install, tested with 16.7.8 (2024/06), ROOTLESS
 * --> Update: 2024/06 tested with iPhone8, still works
 
 1. Use M1 macbook with USB2(!) cable and USB-A to USB-C converter
@@ -25,6 +25,8 @@ Sorted using LATEST to LEGACY
 **NOTE 1:**  If `ssh -p root@localhost` doesn't work with 'alpine' password, install newterm and `sudo passwd root` (enter password set during Sileo install for user `mobile`). This will setup root access.
 
 **NOTE 2:**  If you ever enable TouchID/Passcode even once, __full erase and re-arming of JB is needed!__
+
+# (LEGACY UNDER THIS)
 
 ## (Jailbroken) Normal upgrade process, example: iOS 15.7.5 --> iOS 15.7.7 
 
