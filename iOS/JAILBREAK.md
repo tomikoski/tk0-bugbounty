@@ -1,6 +1,18 @@
-# Jailbreak
+# iOS Jailbreak
+Sorted using LATEST to LEGACY
 
-## New device install, tested with 16.7.8 (2024/06), ROOTLESS
+# New device upgrade, tested with 16.7.8 ROOTLESS -> 16.8.10 ROOTLESS
+* --> Update: 2024/09 tested with iPhone8, still works
+
+1. Open Palera1n from iOS and click REVERT
+1. After revert and reboot, upgrade iOS normally
+1. Re-arm (just run `palera1n` again) iPhone with latest iOS
+1. At this point all custom tweaks are gone, reinstall (such as ssh-keys, SSLKillSwith3, logs, ...) :/
+1. All done!
+
+**NOTE 1:**  If `ssh -p root@localhost` doesn't work with 'alpine' password, install newterm and `sudo passwd root` (enter password set during Sileo install for user `mobile`). This will setup root access.
+
+# New device install, tested with 16.7.8 (2024/06), ROOTLESS
 * --> Update: 2024/06 tested with iPhone8, still works
 
 1. Use M1 macbook with USB2(!) cable and USB-A to USB-C converter
@@ -166,8 +178,6 @@ Error creating socket for listen port 6413: Address not available
 **NOTE 2:** Full logs of this slow'ish but still working proceudure can be seen [here](https://raw.githubusercontent.com/tomikoski/tk0-bugbounty/master/iOS/assets/palera1n-installation-logs.txt)
 
 **NOTE 3:** During second time (restart of device) you just need to run single command `sudo ./palera1n.sh --tweaks 15.7.2 --semi-tethered` and semi-tethering will be super fast, under 1 minute (since JB already exists on device)
-
-
 
 ## Jailbreaking: checkra1n iOS 14.8
 *Using iPhone7 with iOS 14.8*
