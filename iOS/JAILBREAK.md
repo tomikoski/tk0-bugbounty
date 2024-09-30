@@ -26,7 +26,9 @@ Sorted using LATEST to LEGACY
 
 **NOTE 2:**  If you ever enable TouchID/Passcode even once, __full erase and re-arming of JB is needed!__
 
-# (LEGACY UNDER THIS)
+----
+# 💀 (LEGACY UNDER THIS) 💀
+----
 
 ## (Jailbroken) Normal upgrade process, example: iOS 15.7.5 --> iOS 15.7.7 
 
