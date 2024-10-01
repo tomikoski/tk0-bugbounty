@@ -10,7 +10,7 @@ Process for jailbreaking iOS devices
 ### iPhone8 -> follow this:
 * Install: https://github.com/NyaMisty/ssl-kill-switch3 -> Enable/Disable cert validation
 * Enable full logging (ref: https://github.com/EthanArbuckle/unredact-private-os_logs) from iPhone:
-  * copy/edit file into: /Library/Preferences/Logging/com.apple.system.logging.plist 
+  * copy/edit file into: `/Library/Preferences/Logging/com.apple.system.logging.plist`
     ```xml
     <?xml version="1.0" encoding="UTF-8" ?>
     <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
