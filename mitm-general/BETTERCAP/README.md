@@ -26,23 +26,23 @@ wpa-psk "kensentme"
 ...
 
 # check for mode
-sudo iw dev wlan0 info
+$ sudo iw dev wlan0 info
 ...
 	ssid TESTNETWORK
 	type managed
 ...
 
 # if managed, set to monitor
-sudo iw dev wlan0 set type monitor
+$ sudo iw dev wlan0 set type monitor
 
 
 # check for mode
-sudo iw dev wlan0 info
+$ sudo iw dev wlan0 info
 ...
 	ssid TESTNETWORK
 	type monitor
 ...
 
 # start bettercap
-sudo bettercap -iface wlan0
+$ sudo bettercap -iface wlan0
 ```
