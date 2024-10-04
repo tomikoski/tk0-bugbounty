@@ -5,8 +5,6 @@
 ## macOS Sequoia
 
 ```
-# disconnect from Wifi
-
 sudo bettercap -i en0
 ```
 
