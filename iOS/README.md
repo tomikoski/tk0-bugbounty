@@ -46,3 +46,12 @@ Process for jailbreaking iOS devices
 * Install `PreferenceLoader` from Palera1n repos (DO NOT add extra's for Cydia)
 * Install https://github.com/nabla-c0d3/ssl-kill-switch2 using SSH
 * Enable/Disable cert validation
+
+
+## Decrypting HTTPS traffic
+* https://andydavies.me/blog/2019/12/12/capturing-and-decrypting-https-traffic-from-ios-apps/
+
+## Decrypting IPA-files
+* When running **iOS 14.8 with checkra1n**, https://github.com/AloneMonkey/frida-ios-dump can be used.
+* When running **iOS 15.7.2 with palera1n**, https://github.com/paradiseduo/appdecrypt works (frida-ios-dump crashed my palera1n each time)
+* When running **iOS 15.7.3 with palera1n**, once again https://github.com/AloneMonkey/frida-ios-dump can be used :)
