@@ -192,11 +192,3 @@ Error creating socket for listen port 6413: Address not available
 Problem solving:
 * If this doesn't work (exploit does not trigger) - reset iPhone using `erase all content -> everything`. Repeat.
 * If Cydia / apt fails - remove from system and rearm using checkra1n
-
-## Decrypting HTTPS traffic
-* https://andydavies.me/blog/2019/12/12/capturing-and-decrypting-https-traffic-from-ios-apps/
-
-## Decrypting IPA-files
-* When running **iOS 14.8 with checkra1n**, https://github.com/AloneMonkey/frida-ios-dump can be used.
-* When running **iOS 15.7.2 with palera1n**, https://github.com/paradiseduo/appdecrypt works (frida-ios-dump crashed my palera1n each time)
-* When running **iOS 15.7.3 with palera1n**, once again https://github.com/AloneMonkey/frida-ios-dump can be used :)
