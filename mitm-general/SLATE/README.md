@@ -22,5 +22,6 @@ Setup man-in-the-middle network using external router. Attacks everything except
 * Setup some MITM-proxy [certmitm](https://github.com/aapooksman/certmitm)
 * Reset device (push reset for 10 secs) / clean install
 * Fix NTP using current network time (via System menu)
+* Attach **one** attacker machine into AP using Ethernet (due to default bridging rules in certmitm)
 * Use in AP (access point) mode: `Network -> Network mode -> Access Point`, and attach live ISP cable in WAN
 * Connect any victim device into `GL-A1300-20d` or `GL-A1300-20d-5G` WiFi and MITM traffic using [certmitm](https://github.com/aapooksman/certmitm), Burp, mitmproxy etc.
