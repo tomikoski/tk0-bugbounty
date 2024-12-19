@@ -2,11 +2,12 @@
 
 ## generate all rules for all ports
 ## usage:
-## bash uci-firewall-dynamic > uci-firewall-dynamic-output
+## bash uci-firewall-dynamic 192.168.8.121 > uci-firewall-dynamic-output
 ## ssh root@192.168.8.1 'ash -s' < uci-firewall-dynamic-output
 
 # each rule will bypass proxy
-DAPROXY='192.168.8.121'
+#DAPROXY='192.168.8.121'
+DAPROXY=$1
 DAPORT='8080'
 
 # port list to generate
