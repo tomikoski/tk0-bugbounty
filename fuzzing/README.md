@@ -17,6 +17,21 @@ sudo apt install llvm-16 llvm-16-tools clang-16
 
 Follow: https://github.com/AFLplusplus/LibAFL
 
+### Building in Linux (tested with 4.31)
+
+```
+cd AFLplusplus
+make distrib
+
+# build target with:
+$AFL/afl-cc target.c -o target
+
+# fuzz
+$AFL/afl-fuzz -i in -o out -- ./target @@
+
+# fuzz with params
+$AFL/afl-fuzz -i in -o out -- ./target -a someparam -b someparam @@
+```
 
 ## Black box fuzzing with AFL++ for MIPS / ARM etc.
 
@@ -60,8 +75,12 @@ QEMU_LD_PREFIX=/usr/mips-linux-gnu $AFL/afl-fuzz -Q -i in -o out -S fuzz3 -- ./t
 
 Compile AFLplusplus:
 ```
+# only AFL++
 cd AFLplusplus
-gmake
+make distrib
+
+# AFL++ with fpicker
+USEMMAP=1 make distrib
 ```
 
 Fuzz using:
@@ -70,14 +89,6 @@ AFL_INST_LIBS=1 ~/Documents/git/AFLplusplus/afl-fuzz -D -n -i in -o out -- ./som
 ```
 
 ### Binary fuzzing using Frida
-Compile AFLplusplus:
-```
-cd AFLplusplus
-gmake
-cd frida_mode
-gmake
-```
-
 Compile examples:
 ```
 cd AFLplusplus/frida_mode/test/osx-lib
@@ -119,18 +130,18 @@ make frida_adhoctest
 ```
 
 ### Binary fuzzing with fpicker
-fpicker can be found here: https://github.com/ttdennis/fpicker
+fpicker can be found here: https://github.com/ttdennis/fpicker.
 
+#### NOTE: for some weird reason fpicker is segfaulting with M1
+```
+```
+
+
+#### fpicker with Intel Mac (still works)
 Compile AFLplusplus
 ```
-export PATH="/opt/homebrew/Cellar/llvm/17.0.6/bin:/opt/homebrew/Cellar/coreutils/9.4/bin":$PATH
-
-# basically uses: CFLAGS="-DUSEMMAP=1"
 cd AFLplusplus
-TEST_MMAP=1 gmake
-
-cd frida_mode
-TEST_MMAP=1 gmake
+USEMMAP=1 make distrib
 ```
 
 Fuzz with fpicker
