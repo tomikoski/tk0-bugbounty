@@ -21,7 +21,7 @@ Follow: https://github.com/AFLplusplus/LibAFL
 
 ```
 cd AFLplusplus
-make distrib
+make -j($nproc) distrib
 
 # build target with:
 $AFL/afl-cc target.c -o target
@@ -33,22 +33,34 @@ $AFL/afl-fuzz -i in -o out -- ./target @@
 $AFL/afl-fuzz -i in -o out -- ./target -a someparam -b someparam @@
 ```
 
-## Black box fuzzing with AFL++ for MIPS / ARM etc.
+## Black box fuzzing with AFL++ for MIPS / ARM etc. with QEMU or UNICORN
 
-Tested on Debian12. Compile AFL++ as normally would.
+Tested on Debian12. Compile AFL++ as normally would. See this article for multi-arch: https://azeria-labs.com/arm-on-x86-qemu-user/
 
-### Compile unicorn (for MIPS):
+### Compile QEMU (for MIPS):
 ```
-cd unicorn-mode
+cd qemu-mode
+./update-ref.sh
 CPU_TARGET=mips ./build_qemu_support.sh
 
 # fuzz
-QEMU_LD_PREFIX=/usr/mips-linux-gnu $AFL/afl-fuzz -Q -i in -o out -- ./test_mips @@ 
+QEMU_LD_PREFIX=/usr/mips-linux-gnu $AFLDIR/afl-fuzz -Q -i in -o out -- ./test_mips @@
 ```
 
-### Compile unicorn (for arm64):
+### Compile QEMU (for arm):
 ```
-cd unicorn-mode
+cd qemu-mode
+./update-ref.sh
+CPU_TARGET=arm ./build_qemu_support.sh
+
+# fuzz:
+QEMU_LD_PREFIX=/usr/arm-linux-gnueabi $AFLDIR/afl-fuzz -Q -i in -o out -- ./test_arm @@
+```
+
+### Compile QEMU (for arm64):
+```
+cd qemu-mode
+./update-ref.sh
 CPU_TARGET=aarch64 ./build_qemu_support.sh
 
 # fuzz:
@@ -68,6 +80,13 @@ QEMU_LD_PREFIX=/usr/mips-linux-gnu $AFL/afl-fuzz -Q -i in -o out -S fuzz3 -- ./t
 ...
 ...
 ```
+
+### Compile UNICORN (for MIPS):
+```
+TODO
+```
+
+
 
 ## Fuzzing with macOS (M1/ARM)
 
