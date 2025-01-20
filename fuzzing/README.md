@@ -21,7 +21,7 @@ Follow: https://github.com/AFLplusplus/LibAFL
 
 ```
 cd AFLplusplus
-make -j($nproc) distrib
+make -j($nproc)
 
 # build target with:
 $AFL/afl-cc target.c -o target
@@ -96,10 +96,16 @@ Compile AFLplusplus:
 ```
 # only AFL++
 cd AFLplusplus
-make distrib
+
+# normal build
+make
+
+# if errors with instrumentation 'shmat for map: Invalid argument'-error seeing
+USEMMAP=1 make
+
 
 # AFL++ with fpicker
-USEMMAP=1 make distrib
+USEMMAP=1 make
 ```
 
 Fuzz using:
