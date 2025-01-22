@@ -164,7 +164,9 @@ $AFLDIR/afl-fuzz -D -i examples/test/in/ -o examples/test/out -- ./fpicker --fuz
 
 ## hongfuzz
 * Linux: works as documented.
-* macOS: build with `OS=POSIX make clean all` (see: https://github.com/google/honggfuzz/issues/477#issuecomment-1502180246)
+* macOS:
+ * Fix `fuzz.c` PRIu64 errors (change to %lu and %llu)
+ * build with `OS=POSIX make clean all` (see: https://github.com/google/honggfuzz/issues/477#issuecomment-1502180246)
 
 ### Usage
 TODO
