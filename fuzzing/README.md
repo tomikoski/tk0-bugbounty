@@ -7,6 +7,9 @@
 * https://www.digitalocean.com/community/tutorials/how-to-install-and-use-radamsa-to-fuzz-test-programs-and-network-services-on-ubuntu-18-04
 * https://github.com/sec-tools/litefuzz
 * https://googleprojectzero.blogspot.com/2021/05/fuzzing-ios-code-on-macos-at-native.html
+* https://github.com/AFLplusplus/AFLplusplus
+* https://github.com/AFLplusplus/LibAFL
+* https://github.com/google/honggfuzz
 
 ## LibAFL / AFL++
 Debian installation (worked for me):
@@ -21,7 +24,7 @@ Follow: https://github.com/AFLplusplus/LibAFL
 
 ```
 cd AFLplusplus
-make -j($nproc)
+make distrib
 
 # build target with:
 $AFL/afl-cc target.c -o target
@@ -33,34 +36,22 @@ $AFL/afl-fuzz -i in -o out -- ./target @@
 $AFL/afl-fuzz -i in -o out -- ./target -a someparam -b someparam @@
 ```
 
-## Black box fuzzing with AFL++ for MIPS / ARM etc. with QEMU or UNICORN
+## Black box fuzzing with AFL++ for MIPS / ARM etc.
 
-Tested on Debian12. Compile AFL++ as normally would. See this article for multi-arch: https://azeria-labs.com/arm-on-x86-qemu-user/
+Tested on Debian12. Compile AFL++ as normally would.
 
-### Compile QEMU (for MIPS):
+### Compile unicorn (for MIPS):
 ```
-cd qemu-mode
-./update-ref.sh
+cd unicorn-mode
 CPU_TARGET=mips ./build_qemu_support.sh
 
 # fuzz
-QEMU_LD_PREFIX=/usr/mips-linux-gnu $AFLDIR/afl-fuzz -Q -i in -o out -- ./test_mips @@
+QEMU_LD_PREFIX=/usr/mips-linux-gnu $AFL/afl-fuzz -Q -i in -o out -- ./test_mips @@ 
 ```
 
-### Compile QEMU (for arm):
+### Compile unicorn (for arm64):
 ```
-cd qemu-mode
-./update-ref.sh
-CPU_TARGET=arm ./build_qemu_support.sh
-
-# fuzz:
-QEMU_LD_PREFIX=/usr/arm-linux-gnueabi $AFLDIR/afl-fuzz -Q -i in -o out -- ./test_arm @@
-```
-
-### Compile QEMU (for arm64):
-```
-cd qemu-mode
-./update-ref.sh
+cd unicorn-mode
 CPU_TARGET=aarch64 ./build_qemu_support.sh
 
 # fuzz:
@@ -81,13 +72,6 @@ QEMU_LD_PREFIX=/usr/mips-linux-gnu $AFL/afl-fuzz -Q -i in -o out -S fuzz3 -- ./t
 ...
 ```
 
-### Compile UNICORN (for MIPS):
-```
-TODO
-```
-
-
-
 ## Fuzzing with macOS (M1/ARM)
 
 ### Binary fuzzing using non-instrumented mode
@@ -96,16 +80,10 @@ Compile AFLplusplus:
 ```
 # only AFL++
 cd AFLplusplus
-
-# normal build
-make
-
-# if errors with instrumentation 'shmat for map: Invalid argument'-error seeing
-USEMMAP=1 make
-
+make distrib
 
 # AFL++ with fpicker
-USEMMAP=1 make
+USEMMAP=1 make distrib
 ```
 
 Fuzz using:
@@ -183,3 +161,10 @@ frida-compile -v examples/test/test-fuzzer.js -o harness.js
 #terminal 2
 $AFLDIR/afl-fuzz -D -i examples/test/in/ -o examples/test/out -- ./fpicker --fuzzer-mode afl -e attach -p test -f harness.js
 ```
+
+## hongfuzz
+* Linux: works as documented.
+* macOS: build with `OS=POSIX make clean all` (see: https://github.com/google/honggfuzz/issues/477#issuecomment-1502180246)
+
+### Usage
+TODO
