@@ -168,5 +168,33 @@ $AFLDIR/afl-fuzz -D -i examples/test/in/ -o examples/test/out -- ./fpicker --fuz
   1. Fix `fuzz.c` PRIu64 errors (change to %lu and %llu)
   1. build with `OS=POSIX make clean all` (see: https://github.com/google/honggfuzz/issues/477#issuecomment-1502180246)
 
-### Usage
-TODO
+### Usage Linux
+Clone honggfuzz, build it and run example:
+
+```
+cd $HOME
+git clone https://github.com/google/honggfuzz
+mkdir fuzzing && cd fuzzing
+apt source file
+cd file-5.44
+CC=~/git/honggfuzz/hfuzz_cc/hfuzz-clang ./configure --enable-static --disable-shared
+
+#
+# important!
+# check output here for missing features like: lzma, bzip2, ... and fix these before make
+#
+
+make -j$(nproc)
+
+# 
+# important!
+# if make still fails, run this 'autoreconf -v' and re-configure, re-make
+# 
+
+cd hongfuzz/examples/file
+
+~/git/honggfuzz/hfuzz_cc/hfuzz-clang -I ~/fuzzing/linux-sources/file-5.44/src persistent-file.c -o persistent-file ~/fuzzing/linux-sources/file-5.44/src/.libs/libmagic.a -lz /usr/lib/x86_64-linux-gnu/libbz2.a -lz /usr/lib/x86_64-linux-gnu/liblzma.a -lz /usr/lib/x86_64-linux-gnu/libz.a /usr/lib/x86_64-linux-gnu/libzstd.a -lz /usr/lib/x86_64-linux-gnu/liblz.a -lz
+
+~/git/honggfuzz/honggfuzz --input inputs/ --output outputs -R report -- ./persistent-file /home/tomi/fuzzing/linux-sources/file-5.44/magic/magic.local
+
+```
