@@ -169,11 +169,10 @@ $AFLDIR/afl-fuzz -D -i examples/test/in/ -o examples/test/out -- ./fpicker --fuz
   1. build with `OS=POSIX make clean all` (see: https://github.com/google/honggfuzz/issues/477#issuecomment-1502180246)
 
 ### Usage Linux
-Clone honggfuzz, build it and run example:
+Clone honggfuzz, build it. After this run example for 'file':
 
 ```
 cd $HOME
-git clone https://github.com/google/honggfuzz
 mkdir fuzzing && cd fuzzing
 apt source file
 cd file-5.44
