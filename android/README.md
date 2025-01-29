@@ -14,6 +14,18 @@ Proceed with normal path; download firmware from Google, patch it with Magisk [u
 1. Flash: `fastboot flash init_boot images/magisk_patched-<random_string>.img`
 1. Reboot and open Magisk, done!
 
+## Fast-track unbricking Pixel4 tablet (2025)
+Let's assume something went wrong with flashing, here we fscked up `slot b` (default) flashing
+1. Download [official firmware](https://developers.google.com/android/images)
+1. Reboot: `adb reboot bootloader`
+1. Run `fastboot getvar current-slot`, should respond with `slot b` (if not, don't proceed)
+1. Run `fastboot --set-active=a` (slot should change to 'a')
+1. Reboot to recovery using slot a
+1. First press `Power` and then `Volume up` (opens Recovery Menu)
+1. From Recovery Menu, select `Apply update from ADB`
+1. Run `adb sideload <downloaded factory image zip>`
+1. Reboot: `adb reboot bootloader`, slot 'b' should be now active
+1. Start normally and done!
 
 ## Fast-track Pixel4
 1. If Android gets upgraded (via android update system), root is lost
