@@ -1,6 +1,19 @@
 Nexus 5x (with ram disk) + Pixel4 (with ram disk)
 =================================================
 
+## Fast-track rooting for Pixel4 tablet (2025)
+Proceed with normal path; download firmware from Google, patch it with Magisk [using normal path](https://topjohnwu.github.io/Magisk/install.html)
+1. Download firmware: https://developers.google.com/android/images
+1. Unzip `init_boot.img` (not `boot.img` !)
+1. Install Magisk (from Github-releases)
+1. Push image: `adb push init_boot.img /sdcard/Download`
+1. Patch with Magisk
+1. Pull patched image: `adb pull /sdcard/Download/magisk_patched-<random_string>.img`
+1. Reboot: `adb reboot bootloader`
+1. Flash: `fastboot flash init_boot images/magisk_patched-<random_string>.img`
+1. Reboot and open Magisk, done!
+
+
 ## Fast-track Pixel4
 1. If Android gets upgraded (via android update system), root is lost
 1. Reboot after update and Magisk root is gone
