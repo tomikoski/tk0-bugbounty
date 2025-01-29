@@ -20,7 +20,7 @@ Let's assume something went wrong with flashing, here we fscked up `slot b` (def
 1. Reboot: `adb reboot bootloader`
 1. Run `fastboot getvar current-slot`, should respond with `slot b` (if not, don't proceed)
 1. Run `fastboot --set-active=a` (slot should change to 'a')
-1. Reboot to recovery using slot a
+1. Reboot to recovery using slot a: `fastboot reboot recovery`
 1. First press `Power` and then `Volume up` (opens Recovery Menu)
 1. From Recovery Menu, select `Apply update from ADB`
 1. Run `adb sideload <downloaded factory image zip>`
