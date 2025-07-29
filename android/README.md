@@ -30,7 +30,7 @@ Let's assume something went wrong with flashing, here we fscked up `slot b` (def
 ## Fast-track Pixel4
 1. If Android gets upgraded (via android update system), root is lost
 1. Reboot after update and Magisk root is gone
-1. Proceed with normal path; download firmware from Google, patch it with Magisk [using normal path](https://topjohnwu.github.io/Magisk/install.html)
+1. Proceed with normal path **Using init_boot approach**; download firmware from Google, patch it with Magisk [using normal path](https://topjohnwu.github.io/Magisk/install.html)
 
 
 ## Bricked device (works for Pixel4)?
