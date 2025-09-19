@@ -1,7 +1,9 @@
 # MITM in general
-
-## Usage of [GL-iNET](https://www.gl-inet.com/products/gl-a1300/)
 Setup man-in-the-middle network using external router. Attacks everything except proxy IP.
+
+## Usage of GL-INET Slate
+* https://www.gl-inet.com/products/gl-a1300/
+* https://www.gl-inet.com/products/gl-be3600/
 
 ### MITM using GL-iNET adhoc WiFi for 80/443 - MITM iOS/Android
 * Connect existing LAN cable (with internet access) into WAN-port at GL-iNET
