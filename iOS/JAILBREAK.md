@@ -1,8 +1,11 @@
 # iOS Jailbreak
 Sorted using LATEST to LEGACY
 
-## New device upgrade, tested with 16.7.8 ROOTLESS -> 16.8.10 ROOTLESS
-* --> Update: 2024/09 tested with iPhone8, still works
+## new device upgrade, tested with 16.7.10 rootless -> 16.7.12 rootless
+* --> update: 2025/10 tested with iphone8, still works, procedure below
+
+## new device upgrade, tested with 16.7.8 rootless -> 16.7.10 rootless
+* --> update: 2024/09 tested with iphone8, still works
 
 1. Open Palera1n from iOS and click REVERT
 1. After revert and reboot, upgrade iOS normally
