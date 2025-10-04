@@ -15,6 +15,8 @@ Sorted using LATEST to LEGACY
 
 **NOTE 1:**  If `ssh -p root@localhost` doesn't work with 'alpine' password, install newterm and `sudo passwd root` (enter password set during Sileo install for user `mobile`). This will setup root access.
 
+**NOTE 2:**  To install SSLKillSwitch3, use root terminal and do `apt install preferenceloader mobilesubstrate` first.
+
 ## New device install, tested with 16.7.8 (2024/06), ROOTLESS
 * --> Update: 2024/06 tested with iPhone8, still works
 
