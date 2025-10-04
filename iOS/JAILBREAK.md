@@ -13,7 +13,7 @@ Sorted using LATEST to LEGACY
 1. At this point all custom tweaks are gone, reinstall (such as ssh-keys, SSLKillSwith3, logs, ...) :/
 1. All done!
 
-**NOTE 1:**  If `ssh -p root@localhost` doesn't work with 'alpine' password, install newterm and `sudo passwd root` (enter password set during Sileo install for user `mobile`). This will setup root access.
+**NOTE 1:**  If `ssh -p root@localhost` doesn't work with 'alpine' password, install newterm or use 'mobile' ssh-shell for `sudo passwd root` (enter password set during Sileo install for user `mobile`).
 
 **NOTE 2:**  To install SSLKillSwitch3, use root terminal and do `apt install preferenceloader mobilesubstrate` first.
 
