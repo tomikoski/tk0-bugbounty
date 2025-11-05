@@ -43,7 +43,7 @@ Tested on Debian12. Compile AFL++ as normally would.
 ### Compile unicorn (for MIPS):
 ```
 cd unicorn-mode
-CPU_TARGET=mips ./build_qemu_support.sh
+CPU_TARGET=mips ./build_unicorn_support.py
 
 # fuzz
 QEMU_LD_PREFIX=/usr/mips-linux-gnu $AFL/afl-fuzz -Q -i in -o out -- ./test_mips @@ 
