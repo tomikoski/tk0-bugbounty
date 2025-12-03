@@ -167,6 +167,35 @@ $AFLDIR/afl-fuzz -D -i examples/test/in/ -o examples/test/out -- ./fpicker --fuz
 * macOS:
   1. Fix `fuzz.c` PRIu64 errors (change to %lu and %llu)
   1. build with `OS=POSIX make clean all` (see: https://github.com/google/honggfuzz/issues/477#issuecomment-1502180246)
+  1. Fix `Makefile` to remove atomic and extra flags:
+   ```
+diff --git a/Makefile b/Makefile
+index 81a6e84d..8deae005 100644
+--- a/Makefile
++++ b/Makefile
+@@ -27,7 +27,7 @@ BIN := honggfuzz
+ HFUZZ_CC_BIN := hfuzz_cc/hfuzz-cc
+ HFUZZ_CC_SRCS := hfuzz_cc/hfuzz-cc.c
+ COMMON_CFLAGS := -std=c11 -I/usr/local/include -D_GNU_SOURCE -Wall -Wextra -Werror -Wno-format-truncation -Wno-override-init -I.
+-COMMON_LDFLAGS := -pthread -L/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib -lm
++COMMON_LDFLAGS := -pthread -L/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib
+ COMMON_SRCS := $(sort $(wildcard *.c))
+ CFLAGS ?= -O3 -mtune=native -funroll-loops
+ LDFLAGS ?=
+@@ -164,9 +164,9 @@ else
+         ARCH_CFLAGS += -m64 -D_POSIX_C_SOURCE=200809L -D__EXTENSIONS__=1
+        ARCH_LDFLAGS += -m64 -lkstat -lsocket -lnsl -lkvm
+     endif
+-    ifneq ($(OS),Linux)
+-        ARCH_LDFLAGS += -latomic
+-    endif
++#    ifneq ($(OS),Linux)
++#        ARCH_LDFLAGS += -latomic
++#    endif
+     ifneq ($(REALOS),OpenBSD)
+     ifneq ($(REALOS),Darwin)
+         ARCH_LDFLAGS += -lrt
+   ```
 
 ### Usage Linux
 Clone honggfuzz, build it. After this run example for 'file':
