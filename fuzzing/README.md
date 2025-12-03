@@ -168,7 +168,8 @@ $AFLDIR/afl-fuzz -D -i examples/test/in/ -o examples/test/out -- ./fpicker --fuz
   1. Fix `fuzz.c` PRIu64 errors (change to %lu and %llu)
   1. build with `OS=POSIX make clean all` (see: https://github.com/google/honggfuzz/issues/477#issuecomment-1502180246)
   1. Fix `Makefile` to remove atomic and extra flags:
-   ```
+
+```
 diff --git a/Makefile b/Makefile
 index 81a6e84d..8deae005 100644
 --- a/Makefile
@@ -195,7 +196,7 @@ index 81a6e84d..8deae005 100644
      ifneq ($(REALOS),OpenBSD)
      ifneq ($(REALOS),Darwin)
          ARCH_LDFLAGS += -lrt
-   ```
+```
 
 ### Usage Linux
 Clone honggfuzz, build it. After this run example for 'file':
