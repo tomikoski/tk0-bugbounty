@@ -11,16 +11,7 @@
 * https://github.com/AFLplusplus/LibAFL
 * https://github.com/google/honggfuzz
 
-## LibAFL / AFL++
-Debian installation (worked for me):
-
-```
-sudo apt install llvm-16 llvm-16-tools clang-16
-```
-
-Follow: https://github.com/AFLplusplus/LibAFL
-
-### Building sample IoT-targets (binaries)
+## Building sample IoT-targets (binaries)
 
 MIPS (usually in routers):
 ```
@@ -44,6 +35,14 @@ $ file target1
 ```
 
 
+## LibAFL / AFL++
+Debian installation (worked for me):
+
+```
+sudo apt install llvm-16 llvm-16-tools clang-16
+```
+
+Follow: https://github.com/AFLplusplus/LibAFL
 
 ### Building in Linux (tested with 4.32a)
 
