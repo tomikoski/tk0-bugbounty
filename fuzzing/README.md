@@ -19,7 +19,8 @@ MIPS (usually in routers):
 # download: arch mips32, uclibc, mips32
 #
 # Using above, this example creates:
-# -> ELF 32-bit MSB pie executable, MIPS, MIPS32 version 1 (SYSV), dynamically linked, interpreter /lib/ld-uClibc.so.0, not stripped
+# -> ELF 32-bit MSB pie executable, MIPS, MIPS32 version 1 (SYSV), 
+# dynamically linked, interpreter /lib/ld-uClibc.so.0, not stripped
 
 # Set path to your new compiler
 # export CC=./mips-buildroot-linux-uclibc-gnu/usr/bin/mips-linux-gcc
@@ -29,9 +30,12 @@ MIPS (usually in routers):
 # $CC harness.c -o harness -Wl,-dynamic-linker,/lib/ld-uClibc.so.0
 
 mkdir /tmp/mips-build-chain
-/tmp/mips-build-chain/mips32--uclibc--stable-2025.08-1/bin/mips-linux-gcc target1.c -o target1 -Wl,-dynamic-linker,/lib/ld-uClibc.so.0
+/tmp/mips-build-chain/mips32--uclibc--stable-2025.08-1/bin/mips-linux-gcc target1.c \
+ -o target1 -Wl,-dynamic-linker,/lib/ld-uClibc.so.0
+
 file target1
-# outputs: target1: ELF 32-bit MSB pie executable, MIPS, MIPS32 version 1 (SYSV), dynamically linked, interpreter /lib/ld-uClibc.so.0, not stripped
+# outputs: target1: ELF 32-bit MSB pie executable, MIPS, \
+# MIPS32 version 1 (SYSV), dynamically linked, interpreter /lib/ld-uClibc.so.0, not stripped
 ```
 
 
