@@ -28,9 +28,9 @@ MIPS (usually in routers):
 # -Wl,-dynamic-linker sets the specific interpreter path
 # $CC harness.c -o harness -Wl,-dynamic-linker,/lib/ld-uClibc.so.0
 
-$ mkdir /tmp/mips-build-chain
-$ /tmp/mips-build-chain/mips32--uclibc--stable-2025.08-1/bin/mips-linux-gcc target1.c -o target1 -Wl,-dynamic-linker,/lib/ld-uClibc.so.0
-$ file target1
+mkdir /tmp/mips-build-chain
+/tmp/mips-build-chain/mips32--uclibc--stable-2025.08-1/bin/mips-linux-gcc target1.c -o target1 -Wl,-dynamic-linker,/lib/ld-uClibc.so.0
+file target1
 # outputs: target1: ELF 32-bit MSB pie executable, MIPS, MIPS32 version 1 (SYSV), dynamically linked, interpreter /lib/ld-uClibc.so.0, not stripped
 ```
 
