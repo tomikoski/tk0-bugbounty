@@ -18,6 +18,8 @@ MIPS (usually in routers):
 # https://toolchains.bootlin.com/
 # download: arch mips32, uclibc, mips32
 #
+# e.g https://toolchains.bootlin.com/downloads/releases/toolchains/mips32/tarballs/mips32--uclibc--stable-2025.08-1.tar.xz
+#
 # Using above, this example creates:
 # -> ELF 32-bit MSB pie executable, MIPS, \
 # MIPS32 version 1 (SYSV), dynamically linked, interpreter /lib/ld-uClibc.so.0, not stripped
