@@ -20,11 +20,11 @@ sudo apt install llvm-16 llvm-16-tools clang-16
 
 Follow: https://github.com/AFLplusplus/LibAFL
 
-### Building in Linux (tested with 4.31)
+### Building in Linux (tested with 4.32a)
 
 ```
 cd AFLplusplus
-make distrib
+make PERFORMANCE=1
 
 # build target with:
 $AFL/afl-cc target.c -o target
@@ -37,21 +37,20 @@ $AFL/afl-fuzz -i in -o out -- ./target -a someparam -b someparam @@
 ```
 
 ## Black box fuzzing with AFL++ for MIPS / ARM etc.
-
 Tested on Debian12. Compile AFL++ as normally would.
 
-### Compile unicorn (for MIPS):
+### Compile QEMU (for MIPS):
 ```
-cd unicorn-mode
-CPU_TARGET=mips ./build_unicorn_support.py
+cd qemu_mode
+CPU_TARGET=mips ./build_qemu_support.py
 
 # fuzz
 QEMU_LD_PREFIX=/usr/mips-linux-gnu $AFL/afl-fuzz -Q -i in -o out -- ./test_mips @@ 
 ```
 
-### Compile unicorn (for arm64):
+### Compile QEMU (for arm64):
 ```
-cd unicorn-mode
+cd qemu_mode
 CPU_TARGET=aarch64 ./build_qemu_support.sh
 
 # fuzz:
