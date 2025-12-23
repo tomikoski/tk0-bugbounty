@@ -2,10 +2,13 @@
 ## usage: ssh root@192.168.8.1 'ash -s' < uci-firewall
 ##
 
-# each rule will bypass proxy
-DAPROXY='192.168.8.159'
-#DAPROXY='192.168.8.121'
+# each rule will bypass proxy, use ' with DAPROXY!
+DAPROXY='192.168.8.121'
 DAPORT="8080"
+
+# if set, exclude this MAC from MiTM (useful if MiTM aware clients), use ' with MAC_EXCLUDE!
+MAC_EXCLUDE='DE:AD:CA:FE:FA:CE'
+
 
 #443 wan to lan
 uci add firewall redirect
@@ -20,6 +23,9 @@ uci set firewall.@redirect[-1].name='mitm-all-443-wan-to-lan-MAC'
 uci set firewall.@redirect[-1].dest='lan'
 uci set firewall.@redirect[-1].target='DNAT'
 
+uci set firewall.@redirect[-1].src_mac="!$MAC_EXCLUDE"
+
+
 #443 lan to wan
 uci add firewall redirect
 uci set firewall.@redirect[-1]=redirect
@@ -32,6 +38,9 @@ uci set firewall.@redirect[-1].src='lan'
 uci set firewall.@redirect[-1].name='mitm-all-443-lan-to-wan-MAC'
 uci set firewall.@redirect[-1].dest='wan'
 uci set firewall.@redirect[-1].target='DNAT'
+
+uci set firewall.@redirect[-1].src_mac="!$MAC_EXCLUDE"
+
 
 #80 lan to wan
 uci add firewall redirect
@@ -46,6 +55,8 @@ uci set firewall.@redirect[-1].name='mitm-all-80-wan-to-lan-MAC'
 uci set firewall.@redirect[-1].dest='lan'
 uci set firewall.@redirect[-1].target='DNAT'
 
+uci set firewall.@redirect[-1].src_mac="!$MAC_EXCLUDE"
+
 #80 lan to wan
 uci add firewall redirect
 uci set firewall.@redirect[-1]=redirect
@@ -58,6 +69,9 @@ uci set firewall.@redirect[-1].src='lan'
 uci set firewall.@redirect[-1].name='mitm-all-80-lan-to-wan-MAC'
 uci set firewall.@redirect[-1].dest='wan'
 uci set firewall.@redirect[-1].target='DNAT'
+
+uci set firewall.@redirect[-1].src_mac="!$MAC_EXCLUDE"
+
 
 #commit
 uci commit firewall
