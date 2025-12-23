@@ -11,6 +11,17 @@
 * https://github.com/AFLplusplus/LibAFL
 * https://github.com/google/honggfuzz
 
+
+## Preparation / Emulation of FW
+If you have ARM-based firmware and ARM-computer (like Macbook), you can emulate it with:
+
+```
+docker run -it --privileged -v $(pwd):/firmware ubuntu
+mkdir /mnt/firmware
+mount -o offset=119161856 /firmware/firmware.bin /mnt/firmware # offset = rootfs
+chroot /mnt/firmware
+```
+
 ## Building sample IoT-targets (binaries)
 
 MIPS (usually in routers):
