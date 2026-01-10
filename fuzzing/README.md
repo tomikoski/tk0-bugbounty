@@ -11,6 +11,10 @@
 * https://github.com/AFLplusplus/LibAFL
 * https://github.com/google/honggfuzz
 
+## Funky fuzzing :)
+https://github.com/0vercl0k/wtf
+https://doar-e.github.io/blog/2021/07/15/building-a-new-snapshot-fuzzer-fuzzing-ida/
+https://blog.ret2.io/2021/07/21/wtf-snapshot-fuzzing/
 
 ## Preparation / Emulation of FW
 If you have ARM-based firmware and ARM-computer (like Macbook), you can emulate it with:
