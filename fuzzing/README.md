@@ -184,6 +184,7 @@ fpicker can be found here: https://github.com/ttdennis/fpicker.
 
 #### NOTE: for some weird reason fpicker is segfaulting with M1
 ```
+(TODO but it does)
 ```
 
 
