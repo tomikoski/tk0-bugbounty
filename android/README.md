@@ -4,7 +4,7 @@ Nexus 5x (with ram disk) + Pixel4 (with ram disk)
 ## Fast-track rooting for Pixel4 tablet (2025)
 Proceed with normal path; download firmware from Google, patch it with Magisk [using normal path](https://topjohnwu.github.io/Magisk/install.html).
 1. Let's assume bootloader is unlocked, if not, see [this article from Google](https://developers.google.com/android/images#flashtool)
-1. Download [official firmware](https://developers.google.com/android/images)
+1. Download [official OTA-firmware](https://developers.google.com/android/images)
 1. Unzip `init_boot.img` (not `boot.img` !)
 1. Install Magisk from [Github-releases](https://github.com/topjohnwu/Magisk)
 1. Push image: `adb push init_boot.img /sdcard/Download`
