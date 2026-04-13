@@ -1,5 +1,5 @@
 # tk0-bugbounty
-Something and everything related to Bug Bounties
+Something and everything related to Bug Bounties.
 
 ## Android
 * Droid stuff
