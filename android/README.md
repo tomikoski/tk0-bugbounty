@@ -1,6 +1,16 @@
 Pixel7a (with ram disk, 2026)
 =================================================
-1. Download official factory image...
+1. Download official factory image, [example of 2026](https://dl.google.com/dl/android/aosp/lynx-cp2a.260705.006-factory-ba6e0e87.zip) -> '17.0.0 (CP2A.260705.006, Jul 2026)' -> 'Click Link'
+2. Unzip `init_boot.img` (not `boot.img` !)
+1. Install Magisk from [Github-releases](https://github.com/topjohnwu/Magisk)
+1. Push image: `adb push init_boot.img /sdcard/Download`
+1. Patch with Magisk
+1. Pull patched image: `adb pull /sdcard/Download/magisk_patched-<random_string>.img`
+1. Reboot: `adb reboot bootloader`
+2. Test: `fastboot devices` (device should be visible)
+1. Flash: `fastboot flash init_boot images/magisk_patched-<random_string>.img`
+1. Reboot and open Magisk, done!
+2. Optional: Test with ADB: `adb shell "su -c id"` (should return: uid=0(root)...) 
 
 Nexus 5x (with ram disk) + Pixel4 (with ram disk)
 =================================================
