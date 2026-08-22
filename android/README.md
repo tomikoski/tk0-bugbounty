@@ -1,3 +1,7 @@
+Pixel7a (with ram disk, 2026)
+=================================================
+1. Download official factory image...
+
 Nexus 5x (with ram disk) + Pixel4 (with ram disk)
 =================================================
 
