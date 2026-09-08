@@ -1,3 +1,17 @@
+Pixel7a (with ram disk, 2026)
+=================================================
+1. Download official factory image, [example of 2026](https://dl.google.com/dl/android/aosp/lynx-cp2a.260705.006-factory-ba6e0e87.zip) -> '17.0.0 (CP2A.260705.006, Jul 2026)' -> 'Click Link'
+2. Unzip `init_boot.img` (not `boot.img` !)
+1. Install Magisk from [Github-releases](https://github.com/topjohnwu/Magisk)
+1. Push image: `adb push init_boot.img /sdcard/Download`
+1. Patch with Magisk
+1. Pull patched image: `adb pull /sdcard/Download/magisk_patched-<random_string>.img`
+1. Reboot: `adb reboot bootloader`
+2. Test: `fastboot devices` (device should be visible)
+1. Flash: `fastboot flash init_boot images/magisk_patched-<random_string>.img`
+1. Reboot and open Magisk, done!
+2. Optional: Test with ADB: `adb shell "su -c id"` (should return: uid=0(root)...) 
+
 Nexus 5x (with ram disk) + Pixel4 (with ram disk)
 =================================================
 
@@ -99,6 +113,8 @@ uid=0(root) gid=0(root) groups=0(root) context=u:r:magisk:s0
 
 **note2:** If using Pixel Tablet (android 13) - use `init_boot.img` instead of `boot.img`, otherwise same process
 
+
+# Procedures after rooting
 ## Disable certificate validation (pinning) using Magisk
 1. Download latest [ MagiskTrustUserCerts](https://github.com/NVISOsecurity/MagiskTrustUserCerts)
 1. upload `adb push alwaystrustusercerts.zip /sdcard/Download`
@@ -108,6 +124,12 @@ uid=0(root) gid=0(root) groups=0(root) context=u:r:magisk:s0
 1. Reboot and certificate is moved into System Trust Store
 1. Done
 
+## Install Proxy tool for Android
+1. Use [ProxyAgent](https://github.com/GovTech-CSG/ProxyAgent)
+1. (install Magisk module + APK)
+1. You may need to restart ONCE ProxyAgent app after install
+
+# Alternative Android systems
 ## Install Nethunter for Android
 1. Download latest [NetHunter](https://www.kali.org/docs/nethunter/)
 1. Install using TWRP (via recovery) and reboot
