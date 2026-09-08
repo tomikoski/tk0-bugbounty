@@ -1,0 +1,68 @@
+#!/bin/sh
+# commit-msg — strip Claude session identifiers from commit messages.
+#
+# Why: the Claude Code harness injects an attribution footer whose contents vary
+# with the session. While Remote Control is connected it appends a
+# `Claude-Session: https://claude.ai/code/session_<id>` trailer, which pins the
+# commit to a specific chat transcript. That identifier is not wanted in this
+# repository's history, and it reached five commits before anyone noticed.
+#
+# This is a git hook rather than a Claude Code hook on purpose: git enforces it
+# for EVERY tool — Claude Code, Codex, Cursor, a plain terminal commit — whereas
+# a PreToolUse hook binds Claude Code alone.
+#
+# Behaviour: strips the offending lines and lets the commit proceed. It never
+# rejects a commit for containing one; the whole point is that the author should
+# not have to know the trailer existed.
+#
+# Enable (once per clone; the setting lives in .git/config, shared by all
+# worktrees of this repo):
+#   git config core.hooksPath .githooks
+#
+# Bypass, if ever genuinely needed:  git commit --no-verify
+
+set -e
+
+MSG="$1"
+[ -n "$MSG" ] || exit 0
+[ -f "$MSG" ] || exit 0
+
+TMP="${MSG}.scrub.$$"
+trap 'rm -f "$TMP"' EXIT INT TERM
+
+# 1. Drop `Claude-Session:` trailers (any leading whitespace, any case).
+# 2. Drop standalone claude.ai/code/session_... URL lines, which earlier
+#    attribution variants emitted on a line of their own.
+# 3. Squeeze the trailing blank lines that removal can leave behind.
+sed -E \
+  -e '/^[[:space:]]*[Cc]laude-[Ss]ession[[:space:]]*:/d' \
+  -e '/^[[:space:]]*(https?:\/\/)?claude\.ai\/code\/session[_-][A-Za-z0-9]+[[:space:]]*$/d' \
+  "$MSG" > "$TMP"
+
+# Nothing matched: leave the message byte-for-byte alone and stay silent. The
+# tidy pass below must never touch a message that had no identifier in it —
+# otherwise every ordinary commit gets rewritten and told it was scrubbed.
+if cmp -s "$MSG" "$TMP"; then
+  exit 0
+fi
+
+# Collapse trailing blank lines to exactly one newline at end of file.
+awk 'BEGIN{blank=0}
+     /^[[:space:]]*$/ {blank++; next}
+     {while (blank-- > 0) print ""; blank=0; print}
+     END{}' "$TMP" > "${TMP}.tidy"
+
+if cmp -s "$MSG" "${TMP}.tidy"; then
+  rm -f "${TMP}.tidy"
+  exit 0
+fi
+
+cat "${TMP}.tidy" > "$MSG" || {
+  echo "commit-msg: FAILED to rewrite the message — refusing the commit rather than" >&2
+  echo "            letting a session identifier through. Fix .githooks/commit-msg." >&2
+  rm -f "${TMP}.tidy"
+  exit 1
+}
+rm -f "${TMP}.tidy"
+echo "commit-msg: stripped Claude session identifier from the commit message." >&2
+exit 0

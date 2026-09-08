@@ -1,1 +1,58 @@
 .DS_Store
+
+# --- added by new-campaign-repo.sh ---
+*.db
+*.swp
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+
+# Virtualenvs. NOTE: a venv is NOT relocatable — pyvenv.cfg and every console
+# script carry the absolute path it was built at. Rebuild after any move.
+.venv/
+venv/
+env/
+ENV/
+
+# Node
+node_modules/
+
+# Browser-automation scratch — page snapshots + console logs carry live session
+# material (PHPSESSID, bearer tokens). Never commit.
+.playwright-mcp/
+**/.playwright-mcp/
+
+# Per-engagement ephemeral env pointer (rebuildable by bootstrap_env.sh; names a /tmp scratch dir)
+webtesting/projects/*/env.sh
+**/webtesting/projects/*/env.sh
+
+# Accidental SSH keypairs from an ssh-keygen run inside the tree (the parent
+# repo has caught one already: a FIDO2 handle, never committed).
+#
+# DELIBERATELY NARROW — ssh-keygen's default private-key basenames only.
+# Do NOT broaden to *.pem / *.key / *_ecdsa* / *_ed25519*: .pem and .key files
+# are tracked across these repos as recon evidence, plus docker ssh_host_*
+# fixtures. A file-shape glob would silently block the next piece of evidence
+# from ever being added. Public keys (*.pub) stay committable on purpose.
+id_rsa
+id_dsa
+id_ecdsa
+id_ecdsa_sk
+id_ecdsa_sk_rk
+id_ed25519
+id_ed25519_sk
+id_ed25519_sk_rk
+
+
+
+
+
+
+

@@ -1,0 +1,21 @@
+#!/bin/sh
+# pre-commit — report references to the pre-split layout. ADVISORY: never rejects.
+#
+# Same stance as commit-msg: the author should not have to fight a hook. It
+# prints what still points at the old location and lets the commit through,
+# because a stale path is a follow-up chore, not a reason to lose a commit.
+#
+# The gate itself lives in the CONTROL repo, so there is one copy to fix rather
+# than one per campaign repo. If the control repo is not present (a clone on
+# another machine), this exits clean rather than failing the commit.
+#
+# Bypass entirely: git commit --no-verify
+CONTROL="${CONTROL_REPO:-$HOME/Documents/git/tomi/tomikoski-labs}"
+CHECK="$CONTROL/AI/dot-claude/check-stale-refs.sh"
+[ -x "$CHECK" ] || exit 0
+"$CHECK" --quiet "$(git rev-parse --show-toplevel)" || {
+  echo ""
+  echo "  ^ references to the pre-split layout. Commit allowed; fix before the next one."
+  echo ""
+}
+exit 0

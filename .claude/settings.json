@@ -1,0 +1,28 @@
+{
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "sh -c 'for d in \"$CLAUDE_PROJECT_DIR\" \"$(git rev-parse --show-toplevel 2>/dev/null)\"; do [ -n \"$d\" ] && [ -f \"$d/.claude/hooks/worktree-guard.sh\" ] && exec bash \"$d/.claude/hooks/worktree-guard.sh\"; done; git rev-parse --git-dir >/dev/null 2>&1 || exit 0; echo \"worktree-guard.sh NOT FOUND \u2014 worktree isolation is NOT being enforced. Restore .claude/hooks/worktree-guard.sh before writing to this repo.\" >&2; exit 2'",
+            "timeout": 10,
+            "statusMessage": "Checking worktree isolation..."
+          }
+        ]
+      },
+      {
+        "matcher": "Edit|Write|NotebookEdit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "sh -c 'for d in \"$CLAUDE_PROJECT_DIR\" \"$(git rev-parse --show-toplevel 2>/dev/null)\"; do [ -n \"$d\" ] && [ -f \"$d/.claude/hooks/worktree-guard.sh\" ] && exec bash \"$d/.claude/hooks/worktree-guard.sh\"; done; git rev-parse --git-dir >/dev/null 2>&1 || exit 0; echo \"worktree-guard.sh NOT FOUND \u2014 worktree isolation is NOT being enforced. Restore .claude/hooks/worktree-guard.sh before writing to this repo.\" >&2; exit 2'",
+            "timeout": 10,
+            "statusMessage": "Checking worktree isolation..."
+          }
+        ]
+      }
+    ]
+  }
+}
