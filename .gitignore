@@ -56,3 +56,38 @@ id_ed25519_sk_rk
 
 
 
+
+
+
+
+
+
+
+# Agent runtime state. These rules lived ONLY in the control repo's
+# .git/info/exclude and ~/.config/git/ignore — both per-machine, both travelling
+# with nothing. They currently match no file here, which is exactly why they are
+# easy to miss: campaign repos are where agents actually work, so this state WILL
+# appear there, and without these rules it would be committable.
+# Deliberately narrow. `settings.local.json` is ignored; `settings.json` and
+# `hooks/` are TRACKED apparatus and must stay committable — a blanket
+# `.claude/` rule would break the guard this template installs.
+**/.claude/settings.local.json
+**/.claude/scheduled_tasks.json
+**/.claude/scheduled_tasks.lock
+**/.claude/routines/.state/
+**/.claude/worktrees/
+**/.claude/checkpoints/
+**/.claude/mailbox/
+**/.claude/agent-registry.json
+**/.claude/agent-memory-local
+**/.claude/first-run
+**/.claude/assistant-daemon-state.json
+
+# Credential directories. This rule lived ONLY in the control repo's
+# .git/info/exclude, which is per-clone and travels with nothing — not a clone,
+# not a push, not a carve. It was the single rule in that file protecting real
+# material (a private ed25519 key under a campaign's creds/), so a carved repo
+# would have had no equivalent and a later `git add -A` would have committed it.
+# Tracked here so every stamped repo carries it.
+**/creds/
+
