@@ -1,6 +1,6 @@
 Pixel7a (with ram disk, 2026)
 =================================================
-1. Download official **factory image**, [example of 2026](https://dl.google.com/dl/android/aosp/lynx-cp3a.261005.002.a1-factory-4b8f0c7e.zip) -> '17.0.0 (CP2A.260705.006, Jul 2026)' -> 'Click Link'
+1. Download official **factory image**, [example of 2026](https://dl.google.com/dl/android/aosp/lynx-cp3a.261005.002.a1-factory-4b8f0c7e.zip) -> '17.0.0 (CP3A.261005.002.A1, Oct 2026)' -> 'Click Link'
 2. Unzip `init_boot.img` (not `boot.img` !), e.g. `unzip image-lynx-cp3a.261005.002.a1.zip init_boot.img -d image`
 1. Install Magisk from [Github-releases](https://github.com/topjohnwu/Magisk)
 1. Push image: `adb push init_boot.img /sdcard/Download`
